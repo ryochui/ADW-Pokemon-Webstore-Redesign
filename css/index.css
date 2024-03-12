@@ -41,8 +41,29 @@ section {
     height: 100svh;
 }
 
-#home-icon {
-    position: relative;
+#home {
+    align-items: end;
+    justify-content: right;
+    padding-bottom: 25px;
+}
+
+#home-downloads {
+    display: flex;
+    align-items: end;
+}
+
+.home-icon {
+    width: 140px;
+    height: 100%;
+    padding: 5px;
+}
+
+#home-downloads > div {
+    width: auto;
+}
+
+#home-go-icon {
+    width: 150px;
 }
 
 #news {
