@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    z-index: 10;
+    width: 25svw;
+    height: 100svh;
+    position: absolute;
+    list-style-type: none;
+    background: rgb(30,30,30);
+    background: linear-gradient(90deg, rgba(30,30,30,1) 0%, rgba(0,212,255,0) 100%);
+}
+
+.view {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100svh;
+}
+
+section {
+    display: grid;
+    height: 100svh;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+#home-video {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    width: 100svw;
+    height: 100svh;
+}
+
+#home-icon {
+    position: relative;
+}
+
+#news {
+    background-color: blue;
+}
+
+#pokemon {
+    background-color: yellow;
+}
+
+#items {
+    background-color: orange;
+}
+
+#gameplay {
+    background-color: violet;
+}
+
+#season {
+    background-color: gray;
+}
+
+#credits {
+    height: 30svh;
+}
