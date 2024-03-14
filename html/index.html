@@ -7,27 +7,33 @@
     <title>Home</title>
 </head>
 <body>
-    <div id="nav-bar">
-        <div id="burger-container">
-            <div id="hamburger-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+    <div id="burger-container">
+        <div id="hamburger-menu" class="active">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
-        <nav class="active">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#news">NEWS</a></li>
-            <li><a href="#pokemon">POKEMON</a></li>
-            <li><a href="#items">ITEMS</a></li>
-            <li><a href="#gameplay">GAMEPLAY</a></li>
-            <li><a href="#season">SEASON</a></li>
-        </nav>
     </div>
+    <div id="frontUI">
+        <div id="nav-bar">
+            <nav class="active">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#npcs">NPCs</a></li>
+                <li><a href="#pokemon">POKEMON</a></li>
+                <li><a href="#items">ITEMS</a></li>
+                <li><a href="#gameplay">GAMEPLAY</a></li>
+                <li><a href="#season">SEASON</a></li>
+            </nav>
+        </div>
+        <div id="UIElement">
+        </div>
+    </div>
+    
     <video id="home-video" autoplay muted loop plays-inline>
         <source src="../assets/videos/GO-home-video.mp4" />
     </video>
-    <div class="view">
+    <main>
         <section id="home">
             <div id="home-downloads">
                 <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en&gl=US"><img src="../assets/images/home-gplay.png" class="home-icon"></a>
@@ -38,7 +44,12 @@
             </div>
         </section>
         <section id="news">
-            <h1>NEWS</h1>
+            <div id="news-container">
+
+            </div>
+        </section>
+        <section id="npcs">
+            <h1>NPCS</h1>
         </section>
         <section id="pokemon">
             <h1>POKEMON</h1>
@@ -55,7 +66,7 @@
         <section id="credits">
             <h1>CREDITS</h1>
         </section>
-    </div>
+    </main>
 
     
     <script src="../js/index.js"></script>
