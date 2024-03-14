@@ -7,14 +7,23 @@
     <title>Home</title>
 </head>
 <body>
-    <nav>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#news">NEWS</a></li>
-        <li><a href="#pokemon">POKEMON</a></li>
-        <li><a href="#items">ITEMS</a></li>
-        <li><a href="#gameplay">GAMEPLAY</a></li>
-        <li><a href="#season">SEASON</a></li>
-    </nav>
+    <div id="nav-bar">
+        <div id="burger-container">
+            <div id="hamburger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <nav class="active">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#pokemon">POKEMON</a></li>
+            <li><a href="#items">ITEMS</a></li>
+            <li><a href="#gameplay">GAMEPLAY</a></li>
+            <li><a href="#season">SEASON</a></li>
+        </nav>
+    </div>
     <video id="home-video" autoplay muted loop plays-inline>
         <source src="../assets/videos/GO-home-video.mp4" />
     </video>
@@ -47,5 +56,8 @@
             <h1>CREDITS</h1>
         </section>
     </div>
+
+    
+    <script src="../js/index.js"></script>
 </body>
 </html>
