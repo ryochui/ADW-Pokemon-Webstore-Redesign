@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #24CAAB;
+    color: white;
+    padding: 5px 20px;
+    height: 60px;
+}
+
+main {
+    padding-top: 60px;
+    padding: 20px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.checkout-box {
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px; 
+    padding: 0px 0px 20px 0px;
+    background-image: url('/assets/images/cartbg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.checkout-box h2 {
+    margin-bottom: 20px;
+    background: linear-gradient(to left, #1A8996, #24CAAB);
+    border-radius: 20px 20px 0px 0px;
+    padding: 15px 0px 15px 50px;
+    margin: 0px 0px 20px 0px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.checkout-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+}
+
+.box {
+    background-color: #f6f6f6;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 30px 20px 30px;
+}
+
+#items,
+#discount-code,
+#order-summary{
+    background-color: rgba(247, 247, 247, 0.75);
+}
+
+#discount-code{
+    padding: 10px 20px 30px 20px;
+}
+
+#input-discount{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.item-row-title{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #24CAAB;
+    padding-left: 30px;
+}
+
+.title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 17px;
+}
+
+#price-title{
+    margin-left: 5.2rem;
+}
+
+#quantity-title{
+    margin-left: 1rem;
+}
+
+.item-price{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.item-total{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    width: 70px;
+    text-align: right;
+    
+}
+
+.item-row-title h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    margin: 0px 10px 10px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #747474;
+    justify-content: space-between;
+}
+
+.item-name{
+    margin-left: -20px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.item-row-headers {
+    display: flex;
+    padding: 10px 0;
+    margin-bottom: -20px;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+#price-title,
+#quantity-title, 
+#total-title{
+    flex-grow: 1;
+}
+
+.item-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 20%;
+    background-color: #ececec;
+    margin-right: 10px;
+    box-shadow: 3px 5px  #24CAAB;
+}
+
+.photo-details{
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    margin: 0 5px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.quantity-circle {
+    color: #24CAAB;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #24CAAB; 
+    font-size: 16px;
+}
+
+.remove{
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+}
+
+.remove-btn {
+    text-align: center;
+    cursor: pointer;
+}
+
+.discount-code-entry {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.discount-code-entry input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.discount-code-entry button {
+    background-color: #24CAAB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.discount-content {
+    display: flex;
+    align-items: center;
+}
+
+.discount-content input[type="text"] {
+    flex: 1;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.discount-content button {
+    border: none;
+    background-color: #24CAAB;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.order-summary-content {
+    padding: 10px;
+}
+
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.row-title {
+    flex: 1;
+}
+
+.row-value {
+    flex: 1;
+    text-align: right;
+}
+
+.grand-total{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px
+}
+
+.grand-title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #24CAAB;
+    margin: 10px 0;
+}
+
+.terms-checkbox,
+.marketing-checkbox {
+    display: block;
+}
+
+input[type='checkbox'] {
+    accent-color: #24CAAB;
+}
+
+.terms-checkbox{
+    margin-top: 15px;
+}
+
+.small-text {
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+.buy-now-btn {
+    border: none;
+    background-color: #24CAAB;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+
+.buy-now-btn:hover {
+    background-color: #1A8996;
+}
+
+.buy-now-btn:active {
+    background-color: #0F4C52;
+}
+
+
+.small-text{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.apply-btn {
+    background-color: #24CAAB;
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif; 
+    font-weight: 700;
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.apply-btn:hover {
+    background-color: #1A8996;
+}
+
+.apply-btn:active {
+    background-color: #0F4C52;
+}
+
+
+.footer {
+    background-color: #3498db; 
+    height: 100px; 
+}
+

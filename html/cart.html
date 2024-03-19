@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Store</title>
+    <link rel="stylesheet" href="/css/cart.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Web App Store</h1>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="content">
+            <div class="checkout-box">
+                <h2>Checkout</h2>
+                <div class="checkout-content">
+                    <div class="column">
+                        <div class="box" id="items">
+                            <div class="item-row-title">
+                                <h3> Check your cart</h3>
+                            </div>
+                            <div class="item-row-headers">
+                                <div class="title" >
+                                    <p id="price-title">Item</p>
+                                </div>
+                                <div class="title" >
+                                    <p id="price-title">Price</p>
+                                </div>
+                                <div class="title" >
+                                    <p id="quantity-title">Quantity</p>
+                                </div>
+                                <div class="title" >
+                                    <p id="total-title">Total</p>
+                                </div>
+                            </div>
+                            <div class="item-row">
+                                <div class="item-photo">
+                                    <img src="/assets/items/Tickets/Tickets_Ticket.webp" alt="Product Photo" class="photo-details">
+                                </div>
+                                <div class="item-name">Special Research Ticket</div>
+                                <div class="item-price">$7.99</div>
+                                <div class="item-quantity">
+                                    <button class="quantity-btn" id="remove-quantity">-</button>
+                                    <div class="quantity-circle">1</div>
+                                    <button class="quantity-btn" id="add-quantity">+</button>
+                                </div>
+                                <div class="item-total">$7.99</div>
+                                <div class="remove-btn"> <img src="/assets/buttons/delete.png" alt="x" class="remove"></div>
+                            </div>
+                            
+                            <div class="item-row">
+                                <div class="item-photo">
+                                    <img src="/assets/items/Tickets/Tickets_Ticket_GO_Fest.webp" alt="Product Photo" class="photo-details">
+                                </div>
+                                <div class="item-name">GO Fest 2024 Ticket&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div class="item-price">$5.00</div>
+                                <div class="item-quantity">
+                                    <button class="quantity-btn" id="remove-quantity">-</button>
+                                    <div class="quantity-circle">1</div>
+                                    <button class="quantity-btn" id="add-quantity">+</button>
+                                </div>
+                                <div class="item-total">$5.00</div>
+                                <div class="remove-btn"> <img src="/assets/buttons/delete.png" alt="x" class="remove"></div>
+                            </div>
+
+                            <div class="item-row">
+                                <div class="item-photo">
+                                    <img src="/assets/currencies/PokeCoin Packages/3Coin_Pouch.webp" alt="Product Photo" class="photo-details">
+                                </div>
+                                <div class="item-name">Pouch: 1200 PokéCoins</div>
+                                <div class="item-price">$9.99</div>
+                                <div class="item-quantity">
+                                    <button class="quantity-btn" id="remove-quantity">-</button>
+                                    <div class="quantity-circle">1</div>
+                                    <button class="quantity-btn" id="add-quantity">+</button>
+                                </div>
+                                <div class="item-total">$9.99</div>
+                                <div class="remove-btn"> <img src="/assets/buttons/delete.png" alt="x" class="remove"></div>
+                            </div>
+
+                            <div class="item-row">
+                                <div class="item-photo">
+                                    <img src="/assets/currencies/PokeCoin Packages/4Coin_Bucket.webp" alt="Product Photo" class="photo-details">
+                                </div>
+                                <div class="item-name">Bucket: 2500 PokéCoins</div>
+                                <div class="item-price">$19.99</div>
+                                <div class="item-quantity">
+                                    <button class="quantity-btn" id="remove-quantity">-</button>
+                                    <div class="quantity-circle">1</div>
+                                    <button class="quantity-btn" id="add-quantity">+</button>
+                                </div>
+                                <div class="item-total">$19.99</div>
+                                <div class="remove-btn"> <img src="/assets/buttons/delete.png" alt="x" class="remove"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="box" id="discount-code">
+                            <h3>Discount Code</h3>
+                            <div class="discount-code-entry">
+                                <input type="text" placeholder="Enter discount code..." id="input-discount">
+                                <button class="apply-btn">Apply</button>
+                            </div>
+                        </div>
+                        <div class="box" id="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="order-summary-content">
+                                <div class="order-row">
+                                    <div class="row-title">Subtotal</div>
+                                    <div class="row-value subtotal">$0.00</div>
+                                </div>
+                                <div class="order-row">
+                                    <div class="row-title">Service Fee</div>
+                                    <div class="row-value service-fee">$3.14</div>
+                                </div>
+                                <div class="order-row">
+                                    <div class="row-title">Tax Included</div>
+                                    <div class="row-value tax-included">$0.00</div>
+                                </div>
+                                <hr>
+                                <div class="order-row">
+                                    <div class="row-title grand-title">Grand Total</div>
+                                    <div class="row-value grand-total">$103.14</div>
+                                </div>
+                                <div class="order-row">
+                                    <label class="terms-checkbox">
+                                        <input type="checkbox">
+                                        I accept Terms & Conditions and confirm I am over 18 years old (required)
+                                    </label>
+                                </div>
+                                <div class="order-row">
+                                    <label class="marketing-checkbox">
+                                        <input type="checkbox">
+                                        I want to receive price alerts, discount codes, exclusive offers, newsletters and other marketing communication from PokemonGO! via email.
+                                    </label>
+                                </div>
+                                <div class="order-row small-text">
+                                    PokemonGo and Niantic, Inc. act as your Personal Data Controllers. Please consult our Privacy Policy for additional details.
+                                </div>
+                                <div class="order-row">
+                                    <button class="buy-now-btn">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+
+    <script src="/js/cart.js"></script>
+</body>
+</html>
