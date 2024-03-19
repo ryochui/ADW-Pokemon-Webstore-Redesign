@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Store</title>
+    <link rel="stylesheet" href="/css/transact_history.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Web App Store</h1>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="purchase-history">
+            <h2>My Purchases</h2>
+            <div class="purchase-content">
+                <!-- Container for each transaction -->
+                <div class="transaction">
+                    <div class="history-row">
+                        <div class="date">March 11, 2009</div>
+                        <div class="order-id">Order ID 20021201</div>
+                    </div>
+                    <hr>
+                    <div class="history-row">
+                        <div class="item-photo">
+                            <img src="/assets/items/item1.jpg" alt="Product Photo" class="photo-details">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Item Name</div>
+                            <div class="item-description">Short description of the item</div>
+                        </div>
+                        <div class="item-price">$0.99</div>
+                    </div>
+                </div>
+
+                <div class="transaction">
+                    <div class="history-row">
+                        <div class="date">March 10, 2009</div>
+                        <div class="order-id">Order ID 20021201</div>
+                    </div>
+                    <hr>
+                    <div class="history-row">
+                        <div class="item-photo">
+                            <img src="/assets/items/item1.jpg" alt="Product Photo" class="photo-details">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Item Name</div>
+                            <div class="item-description">Short description of the item</div>
+                        </div>
+                        <div class="item-price">$0.99</div>
+                    </div>
+                    <div class="history-row">
+                        <div class="item-photo">
+                            <img src="/assets/items/item1.jpg" alt="Product Photo" class="photo-details">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Item Name</div>
+                            <div class="item-description">Short description of the item</div>
+                        </div>
+                        <div class="item-price">$0.99</div>
+                    </div>
+                </div>
+
+                <div class="transaction">
+                    <div class="history-row">
+                        <div class="date">March 9, 2009</div>
+                        <div class="order-id">Order ID 20021201</div>
+                    </div>
+                    <hr>
+                    <div class="history-row">
+                        <div class="item-photo">
+                            <img src="/assets/items/item1.jpg" alt="Product Photo" class="photo-details">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Item Name</div>
+                            <div class="item-description">Short description of the item</div>
+                        </div>
+                        <div class="item-price">$0.99</div>
+                    </div>
+                    <div class="history-row">
+                        <div class="item-photo">
+                            <img src="/assets/items/item1.jpg" alt="Product Photo" class="photo-details">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Item Name</div>
+                            <div class="item-description">Short description of the item</div>
+                        </div>
+                        <div class="item-price">$0.99</div>
+                    </div>
+                </div>
+
+                <div class="transaction">
+                    <div class="history-row">
+                        <div class="date">March 10, 2009</div>
+                        <div class="order-id">Order ID 20021201</div>
+                    </div>
+                    <hr>
+                    
+                    <div class="history-row">
+                        <div class="item-photo">
+                            <img src="/assets/items/item1.jpg" alt="Product Photo" class="photo-details">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Item Name</div>
+                            <div class="item-description">Short description of the item</div>
+                        </div>
+                        <div class="item-price">$0.99</div>
+                    </div>
+                </div>
+
+                <!-- More transaction containers can be added here -->
+            </div>
+            <div class="pagination-buttons">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+        <div class="billing-information">
+            <h2>Billing Information</h2>
+            
+            <div class="billing-option">
+                <div class="billing-row">
+                    <div class="card-logo"><img src="/assets/cards/mastercard.jpg" alt="MasterCard Logo"></div>
+                    <div class="card-title">MasterCard</div>
+                    <div class="added-date">07/20</div>
+                    <button class="edit-btn">Edit</button>
+                    <button class="remove-btn">×</button>
+                </div>
+                <div class="billing-row hidden">
+                    <input type="text" class="name-on-card" placeholder="Name on Card">
+                </div>
+                <div class="billing-row hidden">
+                    <input type="text" class="credit-card-number" placeholder="Credit Card Number">
+                </div>
+                <div class="billing-row hidden">
+                    <div class="expires-label">Expires:</div>
+                    <input type="text" class="expiry-month" placeholder="Month">
+                    <input type="text" class="expiry-year" placeholder="Year">
+                </div>
+                <div class="billing-row hidden">
+                    <input type="text" class="security-code" placeholder="Security Code">
+                    <button class="save-btn">Save</button>
+                </div>
+            </div>
+            
+            <div class="new-billing-option">
+                <h2>Add Billing Option</h2>
+                <div class="card-logos">
+                    <div class="card-logo"><img src="/assets/cards/visa.png" alt="Visa Logo"></div>
+                    <div class="card-logo"><img src="/assets/cards/mastercard.jpg" alt="MasterCard Logo"></div>
+                    <div class="card-logo"><img src="/assets/cards/unionbank.png" alt="UnionBank Logo"></div>
+                    <div class="card-logo"><img src="/assets/cards/bpi.png" alt="BPI Logo"></div>
+                </div>
+                <div class="billing-row">
+                    <div class="card-type">
+                        <select>
+                            <option value="Visa">Visa</option>
+                            <option value="MasterCard">MasterCard</option>
+                            <option value="UnionBank">UnionBank</option>
+                            <option value="BPI">BPI</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="billing-row hidden">
+                    <input type="text" class="name-on-card" placeholder="Name on Card">
+                </div>
+                <div class="billing-row hidden">
+                    <input type="text" class="credit-card-number" placeholder="Credit Card Number">
+                </div>
+                <div class="billing-row hidden">
+                    <div class="expires-label">Expires:</div>
+                    <input type="text" class="expiry-month" placeholder="Month">
+                    <input type="text" class="expiry-year" placeholder="Year">
+                </div>
+                <div class="billing-row hidden">
+                    <input type="text" class="security-code" placeholder="Security Code">
+                </div>
+                <div class="billing-row">
+                    <button class="save-new">Save</button>
+                </div>
+            </div>
+                    
+                
+            </div>
+            
+            
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Footer content goes here -->
+    </footer>
+
+    <script src="/js/transact_history.js"></script>
+</body>
+</html>
