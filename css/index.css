@@ -12,6 +12,27 @@
     display: none;
 }
 
+/*UI Element*/
+#frontUI {
+    display: grid;
+    position: fixed;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    place-items: center;
+    justify-items: center;
+    width: 100svw;
+    top: 2em;
+    padding: 0px 20svw 0px 20svw;
+    z-index: 696969;
+    font-family: Roboto Condensed, sans-serif;
+    font-size: 1.5rem;
+}
+
+#frontUI > hr {
+    height: 1px;
+    /* width: clamp(1px, 80%, 100%); */
+  }
+
+
 /*Hamburger Menu*/
 #burger-container {
     position: fixed;
@@ -19,7 +40,7 @@
     justify-items: center;
     align-items: center;
     left: 20px;
-    top: 2rem;
+    top: 2em;
     height: 60px;
     width: 60px;
     background-color: #1A8996;
@@ -117,10 +138,10 @@ a:hover {
     top: 2rem;
     right: 20px;
     z-index: 2;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border: 2px solid #24CAAB;
     letter-spacing: 4px;
-    font-size: 1em;
+    font-size: 0.75em;
     font-weight: 400;
     border-radius: 500px;
     box-shadow: rgba(14,35,74, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -133,6 +154,29 @@ a:hover {
     box-shadow: none;
 }
 
+#shop-icon {
+    display: none;
+    width: 40px;
+    height: 40px;
+    fill: #cce9ec;
+    padding: 0;
+}
+
+@media screen and (width < 480px){
+    #shop {
+        padding: 10px;
+    }
+
+    #shop > p {
+        display: none;
+    }
+
+    #shop-icon {
+        display: block;
+    }
+}
+
+/*wrapper*/
 
 main {
     scroll-snap-type: y mandatory;
@@ -140,14 +184,18 @@ main {
     height: 100svh;
 }
 
+/*sections*/
+
 section {
     display: grid;
     height: 100svh;
-    width: 100swh;
+    width: 100svw;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
 }
+
+/*home*/
 
 #home-video {
     position: absolute;
@@ -182,17 +230,39 @@ section {
     width: 150px;
 }
 
+/*news*/
+
 #news {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(215,185,237);
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='40' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M0 30h20L10 50zm-10-20h20L0 30zm20 0h20L20 30zM0-10h20L10 10z'  stroke-width='1' stroke='hsla(204, 45%, 94%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>"), linear-gradient(-180deg, rgba(215,185,237,1) 0%, rgba(136,149,243,1) 100%);
-    background-blend-mode: multiply;
+    background: rgb(47,117,122);
+    background: linear-gradient(-45deg, rgba(47,117,122,1) 0%, rgba(77,181,129,1) 100%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
-/* #news-container {
-    
-} */
+#news-container {
+    position: relative;
+    top: 20px;
+    width: 80svw;
+    height: 80svh;
+    background-color: #A5D1BC;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#news-pokeball {
+    position: absolute;
+    width: 70px;
+}
+
+#news-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #F9FBFB;
+    border-radius: 5px;
+    clip-path: polygon(15% 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%);
+}
 
 #npcs {
     background-color: pink;
@@ -208,13 +278,32 @@ section {
 
 
 #gameplay {
-    background-color: violet;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(215,185,237);
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='40' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M0 30h20L10 50zm-10-20h20L0 30zm20 0h20L20 30zM0-10h20L10 10z'  stroke-width='1' stroke='hsla(204, 45%, 94%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>"), linear-gradient(-180deg, rgba(215,185,237,1) 0%, rgba(136,149,243,1) 100%);
+    background-blend-mode: multiply;
 }
 
 #season {
     background-color: gray;
 }
 
+/*credits*/
+
 #credits {
-    height: 30svh;
+    height: fit-content;
+    background-color: #0E234A;
+    padding: 4svh 4svw 4svh 4svw;
+    display: grid;
+    color: #FEFEFF;
+    font-family: Lato, sans-serif;
+    font-weight: 200;
+    font-size: 2svh;
+    line-height: 120%;
+    justify-items: center;
+}
+
+#credits > p {
+    text-align: center;
 }
