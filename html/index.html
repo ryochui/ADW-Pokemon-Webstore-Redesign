@@ -31,7 +31,7 @@
         </svg>
         <p>SHOP</p>
     </aside></a>
-    <aside id="frontUI"><hr>PLACEHOLDER<hr></aside>
+    <!-- <aside id="frontUI"><hr>PLACEHOLDER<hr></aside> FIT LATER ON-->
     <video id="home-video" autoplay muted loop plays-inline>
         <source src="../assets/videos/GO-home-video.mp4" />
     </video>
@@ -53,6 +53,62 @@
                     <path d="M 437.541 254.411 C 436.431 173.491 386.891 101.031 311.081 72.111 C 234.671 42.991 144.571 67.321 92.901 130.451 C 41.481 193.321 33.691 283.901 75.571 354.001 C 117.371 423.951 199.311 460.001 279.121 445.631 C 370.121 429.261 435.261 347.511 437.471 256.491 C 437.53 255.8 437.553 255.105 437.541 254.411 Z M 106.131 172.701 C 139.841 116.321 207.311 85.321 272.081 97.751 C 341.481 111.041 392.511 168.221 400.911 236.751 L 305.491 236.751 C 297.231 209.391 273.491 188.751 242.871 188.751 C 213.221 188.751 187.721 209.401 179.761 236.751 L 84.821 236.751 C 87.227 214.115 94.496 192.267 106.131 172.701 Z M 273.211 254.421 C 271.211 293.171 212.541 293.821 212.541 254.421 C 212.541 215.021 271.251 215.651 273.211 254.421 Z M 297.211 404.211 C 233.931 426.901 162.081 407.061 119.381 355.141 C 100.039 331.42 88.026 302.579 84.811 272.141 L 179.681 272.141 C 187.591 299.531 213.381 320.141 242.871 320.141 C 273.541 320.141 297.231 299.461 305.491 272.141 L 400.941 272.141 C 393.691 331.321 354.621 383.641 297.221 404.211 L 297.211 404.211 Z" style="fill: rgb(165, 209, 188);"></path>
                 </svg>
                 <div id="news-main">
+                    <div id="news-carousel">
+                        <img src="../assets/pastEvents/Past Events_2023Detective_Pikachu_Returns.jpg" alt="Detective Pikachu Returns Event" id="slide-1">
+                        <img src="../assets/pastEvents/Past Events_2022Festival_Of_Lights.jpg" alt="Festival of Lights Event" id="slide-2">
+                        <img src="../assets/pastEvents/Past Events_2021Valentines.jpg" alt="Valentines Event" id="slide-3">
+                    </div>
+                    <div id="news-body">
+                        <div id="actual-news">
+                            <div id="news-1" class="active">
+                                <h1>2023 Detective Pikachu Returns Event
+                                </h1>
+                                <p>This event is a special collaborative event to 
+                                    celebrate the launch of the Nintendo Switch title 
+                                    Detective Pikachu Returns.
+                                    <br><br>
+                                    Trainers, gear up and join forces with Detective Pikachu
+                                    to uncover mysteries, capture elusive Pokémon, and immerse
+                                    yourself in the excitement of the Detective Pikachu Returns
+                                    Event in Pokémon Go!</p>
+                            </div>
+                            <div id="news-2">
+                                <h1>Festival of Lights</h1>
+                                <p>This event was the 2022 annual Festival of Lights event which focuses on Morelull
+                                    <br><br>
+                                    Earn and wear the Sparkler clothing set by completing the Festival of Lights Timed Research,
+                                    adding a festive touch to your avatar's attire.
+                                </p>
+                            </div>
+                            <div id="news-3">
+                                <h1>Valentine's Day</h1>
+                                <p>To celebrate Valentine's Day, a special event was held focused on various pink Pokémon
+                                    and introduces Munna and Musharna to the game
+                                    <br><br>
+                                    The Valentine's Day 2021 event in Pokémon Go brought trainers together in a celebration of
+                                    love, friendship, and discovery, enriching their journey with delightful encounters and
+                                    rewarding experiences.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="news-nav">
+                            <a href="#slide-1" onclick="openNews(0)">
+                                <svg class="slide-circle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 2 2">
+                                <circle r="1" cx="0" cy="0" fill="#246873" />
+                                </svg>
+                            </a>
+                            <a href="#slide-2" onclick="openNews(1)">
+                                <svg class="slide-circle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 2 2">
+                                <circle r="1" cx="0" cy="0" fill="#246873" />
+                                </svg>
+                            </a>
+                            <a href="#slide-3" onclick="openNews(2)">
+                                <svg class="slide-circle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 2 2">
+                                <circle r="1" cx="0" cy="0" fill="#246873" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,6 +1,8 @@
 let nav = document.querySelector("nav");
 let sections = document.querySelectorAll("section");
 let hamburger = document.querySelector("#hamburger-menu");
+let news = document.querySelector("#actual-news").children;
+let newsArr = Array.from(news);
 
 hamburger.addEventListener("click", function toggleSideBar() {
     nav.classList.toggle("active");
@@ -15,4 +17,14 @@ sections.forEach(section => {
         }
     });
 });
+
+function openNews(page) {
+    newsArr.forEach((item) => {
+        item.classList.remove("active");
+    });
+    newsArr[page].classList.toggle("active");
+};
+
+
+
 
