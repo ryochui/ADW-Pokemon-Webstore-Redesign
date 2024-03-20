@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Store</title>
+    <link rel="stylesheet" href="/css/payment.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    </header>
+    
+    <main>
+        <div class="payment-container">
+            <div class="payment-section">
+                <div class="payment-title">
+                    <a href="cart.html" class="logo"><img src="/assets/buttons/left-arrow.png" alt="Back Button" id="back-button" ></a>
+                    <img src="/assets/images/pokemongo_logo.png" alt="Web App Store Logo" class="logo-image">
+                </div>
+                <div class="side-payment-header">
+                    <h2>Pay PokemonGo!</h2>
+                    <h1>$46.11</h1>
+                </div>
+                <div class="side-payment-details">
+                    <div class="side-detail-row">
+                        <div class="side-detail-label">Special Research Ticket</div>
+                        <div class="side-detail-value">$7.99</div>
+                    </div>
+                    <div class="side-detail-row">
+                        <div class="side-detail-label">GO Fest 2024 Ticket</div>
+                        <div class="side-detail-value">$5.00</div>
+                    </div>
+                    <div class="side-detail-row">
+                        <div class="side-detail-label">Pouch - 1200 PokéCoins</div>
+                        <div class="side-detail-value">$9.99</div>
+                    </div>
+                    <div class="side-detail-row">
+                        <div class="side-detail-label">Bucket - 2500 PokéCoins</div>
+                        <div class="side-detail-value">$19.99</div>
+                    </div>
+                    <div class="side-detail-row">
+                        <div class="side-detail-label">Service Fee</div>
+                        <div class="side-detail-value">$3.14</div>
+                    </div>
+                    <div class="side-detail-end">
+                        <div class="side-detail-label">Powered by BBMM</div>
+                        <span class="underline">Terms</span> &nbsp; |&nbsp; <span class="underline">Privacy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-summary">
+                
+                    <div class="payment-header">
+                        <h2>Card Information</h2>
+                    </div>
+                    <div class="payment-details">
+                        <div class="detail-row">
+                            <label for="email" class="detail-label">Email</label>
+                            <input type="email" id="email" class="detail-value" placeholder="Enter your email">
+                        </div>
+                        <div class="detail-row">
+                            <label for="cardNumber" class="detail-label">Card Number</label>
+                            <input type="text" id="cardNumber" class="detail-value" placeholder="1234 1234 1234 1234">
+                            <img src="/assets/cards/visa.png" alt="Visa Logo">
+                        </div>
+                        <div class="detail-row">
+                            <label for="expiryDate" class="detail-label">Expiry Date</label>
+                            <input type="text" id="expiryDate" class="detail-value" placeholder="MM/YY">
+                        </div>
+                        <div class="detail-row">
+                            <label for="cvc" class="detail-label">CVC</label>
+                            <input type="text" id="cvc" class="detail-value" placeholder="CVC">
+                        </div>
+                        <div class="detail-row">
+                            <label for="cardholderName" class="detail-label">Cardholder Name</label>
+                            <input type="text" id="cardholderName" class="detail-value" placeholder="Full Name on Card">
+                        </div>
+                        <div class="detail-row">
+                            <label for="countryRegion" class="detail-label">Country or Region</label>
+                            <select id="countryRegion" class="detail-value">
+                                <option value="Philippines">Philippines</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="India">India</option>
+                                <option value="China">China</option>
+                            </select>
+                        </div>
+                        <div class="detail-row rounded-border">
+                            <label for="phoneNumber" class="detail-label">Securely save my information for 1-click checkout</label>
+                            <div class="input-container">
+                                <input type="text" id="phoneNumber" class="detail-value" placeholder="0905 123 4567">
+                                <span class="optional-label">Optional</span>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <a href="transact_history.html" class="payment"><button class="pay-button" id="payButton">Pay Now</button></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/payment.js"></script>
+</body>
+</html>

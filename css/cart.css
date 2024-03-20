@@ -344,6 +344,10 @@ input[type='checkbox'] {
     transition: background-color 0.3s ease;
 }
 
+a {
+    flex: 2;
+}
+
 .buy-now-btn:hover {
     background-color: #1A8996;
 }
