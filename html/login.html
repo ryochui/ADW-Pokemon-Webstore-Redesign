@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Store</title>
+    <link rel="stylesheet" href="/css/login.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Web App Store</h1>
+        </nav>
+    </header>
+    
+    <main>
+        <img src="/assets/images/pikachu.png" alt="Pikachu" class="pikachu-image">
+
+        <div class="logo-container">
+            <img class="logo-image" src="/assets/buttons/pokemongo_logo2.png" alt="Website Logo">
+            <img class="logo-image" src="path_to_developer_logo_image" alt="Developer Logo">
+        </div>
+
+        <div class="rounded-border container">
+            <div class="column">
+                <div class="row">
+                    <h2 class="title-one">DON'T HAVE AN ACCOUNT? REGISTER TODAY!</h2>
+                </div>
+                <div class="row description-one">
+                    <p>Hi there! Sign up for an account and enjoy your PokemonGo shopping experience today.</p>
+                </div>
+                <div class="row">
+                    <a href="register.html" class="side-button">
+                        <button class="register-button">CREATE A NEW ACCOUNT</button>
+                    </a>
+                </div>                
+            </div>
+            <div class="column login-section">
+                <div class="row">
+                    <h2>SIGN IN</h2>
+                </div>
+                <div class="row">
+                    <div class="input-container">
+                        <input type="text" placeholder="Email" class="with-icon" id="email">
+                        <img src="/assets/buttons/email.png" alt="Profile Icon" class="icon">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-container">
+                        <input type="text" placeholder="Password" class="with-icon" id="password">
+                        <img src="/assets/buttons/key.png" alt="Profile Icon" class="icon">
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="profile.html" class="login-link"><button class="login-button">LOGIN</button></a>
+                </div>
+                <div class="row">
+                    <p class="small-text clickable" id="forget-link">Forgot password?</p>
+                </div>
+                <div class="row">
+                    <p class="small-text">Sign in with existing login from a social network account!</p>
+                </div>
+                <div class="row social-buttons">
+                    <a href="https://appleid.apple.com/sign-in" target="_blank"><img src="/assets/buttons/apple.png" alt="Apple Login" class="social-logo"></a>
+                    <a href="https://www.facebook.com/login/" target="_blank"><img src="/assets/buttons/facebook.png" alt="Facebook Login" class="social-logo"></a>
+                    <a href="https://accounts.google.com/signin" target="_blank"><img src="/assets/buttons/google.png" alt="Google Login" class="social-logo"></a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>
