@@ -36,7 +36,7 @@ main {
 .column {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Display items vertically */
+    flex-direction: column;
 }
 
 .user-info{
@@ -49,7 +49,7 @@ main {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size:cover;
-    background-color: #f0f0f0; /* Light gray */
+    background-color: #f0f0f0;
     margin:0;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
@@ -81,27 +81,27 @@ main {
 }
 
 .follow-btn {
-    background-color: #24CAAB; /* Button background color */
-    color: white; /* Button text color */
-    padding: 0.2rem 0.2rem; /* Padding around button text */
-    border: none; /* Remove button border */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 11px; /* Button text size */
+    background-color: #24CAAB;
+    color: white;
+    padding: 0.2rem 0.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 11px;
     font-weight: 700;
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     box-shadow: 2px 2px 2px #272727;
     margin: -0.5rem -10rem 0rem -1rem;
 }
 
 .follow-btn:hover {
-    background-color: #1AAB8E; /* Darker background color on hover */
+    background-color: #1AAB8E;
 }
 
 .user-stats-bio {
     background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: flex-start; /* Change to flex-start */
+    justify-content: flex-start;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     border-top: 3px solid #24CAAB;
@@ -119,12 +119,12 @@ main {
 .user-pic,
 .user-info,
 .social {
-    flex-grow: 0; /* Prevent columns from growing */
-    width: auto; /* Reset width to auto */
+    flex-grow: 0;
+    width: auto;
 }
 
 .user-info {
-    margin-right: 10px; /* Add margin between user-info and social */
+    margin-right: 10px;
 }
 .user-stats {
     display: flex;
@@ -135,13 +135,13 @@ main {
     flex-direction: column;
     margin-right: 10px;
     padding-right: 10px;
-    border-right: 1px solid #ccc; /* Adding vertical line */
+    border-right: 1px solid #ccc;
 }
 
 .user-stats .column:last-child {
     margin-right: 0;
     padding-right: 0;
-    border-right: none; /* Remove vertical line for the last column */
+    border-right: none;
 }
 
 .user-stats .column strong {
@@ -155,11 +155,11 @@ main {
 .user-stats-bio {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items vertically at the start */
+    align-items: flex-start;
 }
 
 .user-bio {
-    text-align: right; /* Align text to the right */
+    text-align: right;
     max-width: 500px;
     word-wrap: break-word;
     padding: 0rem 1rem 0rem 0rem;
@@ -173,18 +173,18 @@ main {
 }
 
 .social {
-    flex-grow: 0; /* Prevent column from growing */
-    flex-shrink: 0; /* Prevent column from shrinking */
+    flex-grow: 0;
+    flex-shrink: 0;
     padding: 0 0px;
-    margin-right: 0; /* Remove margin between columns */
-    width: 10%; /* Set width to 20% of the container */
+    margin-right: 0;
+    width: 10%;
     min-width: 60px;
 }
 
 .social img {
-    min-width: 1.5rem; /* Make social media icons responsive */
+    min-width: 1.5rem;
     max-width: 2rem;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     margin: 5.9rem 0.3rem 0rem 0rem;
 }
 
@@ -230,7 +230,7 @@ hr {
 
 .content-section .row.cards {
     display: flex;
-    justify-content: flex-start; /* Align cards to the left */
+    justify-content: flex-start;
     margin-bottom: 10px;
 }
 
@@ -241,33 +241,32 @@ hr {
 
 .content-section .row a:hover {
     font-weight: bold;
-    color: #24CAAB; /* Change color on hover */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    color: #24CAAB;
+    transition: color 0.3s ease;
 }
 
-/* CSS for Pokemon Card */
 .pokemon-card {
     border-radius: 5%;
     overflow: hidden;
-    margin-right: 10px; /* Add margin between cards */
-    flex: 1; /* Allow cards to grow and fill available space */
-    max-width: 20rem; /* Set maximum width for cards */
-    display: flex; /* Display as flex container */
+    margin-right: 10px;
+    flex: 1;
+    max-width: 20rem;
+    display: flex;
     box-shadow: 2px 2px 2px #c5c5c5;
 }
 
 .pokemon-card .pokemon-img {
-    width: 40%; /* Ensure the image fills the width of its container */
+    width: 40%;
     height: auto;
     background-color: #ffffff;
     padding: 0.5rem;
 }
 
 .pokemon-card .pokemon-info {
-    flex: 1; /* Allow info section to grow */
+    flex: 1;
     padding: 10px;
-    display: flex; /* Display as flex container */
-    flex-direction: column; /* Items inside displayed vertically */
+    display: flex;
+    flex-direction: column;
     justify-content:space-between;
     background-color: #24CAAB;
     background-image: url('/assets/profilePokemons/mewtwo2.jpg');
@@ -280,7 +279,7 @@ hr {
 
 .pokemon-card h3,
 .pokemon-card p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .pokemon-card p{
@@ -303,13 +302,13 @@ hr {
 }
 
 .column2 {
-    background: #e7e7e7; /* Placeholder for red shape */
+    background: #e7e7e7;
     background-image: url('/assets/images/cartbg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
     flex-grow: 0;
-    width: 30rem; /* Adjust width as needed */
+    width: 30rem;
     margin: 1rem 2rem 1rem 2rem;
     border-radius: 23px;
 }
@@ -341,7 +340,7 @@ hr {
     height: auto;
     margin-right: 10px;
     border-radius: 20%;
-    border: 2px solid #24CAAB; /* Add border to give the medals a circular appearance */
+    border: 2px solid #24CAAB;
     background-color: #ffffff;
     box-shadow: 1px 1px 3px #3d3d3d;
 }
