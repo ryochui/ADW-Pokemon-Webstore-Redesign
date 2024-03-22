@@ -403,7 +403,24 @@ hr {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     z-index: 9999;
-    width: 300px;
+    width: 80%; /* Set a default width */
+    max-width: 400px; /* Set a maximum width */
+}
+
+/* Adjust width and padding for smaller screens */
+@media screen and (max-width: 768px) {
+    .popup-card {
+        width: 90%; /* Adjust width for screens up to 768px */
+        padding: 20px; /* Adjust padding for screens up to 768px */
+    }
+}
+
+/* Adjust width and padding for even smaller screens */
+@media screen and (max-width: 480px) {
+    .popup-card {
+        width: 95%; /* Adjust width for screens up to 480px */
+        padding: 15px; /* Adjust padding for screens up to 480px */
+    }
 }
 
 .popup-header {
