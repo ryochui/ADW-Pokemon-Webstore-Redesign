@@ -50,3 +50,38 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', nextPage);
     prevButton.addEventListener('click', prevPage);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cartButtons = document.querySelectorAll('.cart-button');
+    const popupCard = document.getElementById('popup-card');
+
+    cartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get product details from the clicked card
+            const card = this.closest('.card');
+            const itemName = card.querySelector('.title').textContent;
+            const itemIcon = card.querySelector('img').getAttribute('src');
+
+            // Update the content of the popup card using template literal
+            popupCard.innerHTML = `
+                <div class="popup-header">
+                    <img src="${itemIcon}" alt="${itemName}" class="popup-item-icon">
+                    <h2 class="popup-item-name">${itemName}</h2>
+                </div>
+                <p class="popup-message">Item added to cart!</p>
+                <button class="close-button">Close</button>
+            `;
+
+            // Display the popup card
+            popupCard.style.display = 'block';
+
+            // Add event listener to the close button inside the popup card
+            const closeButton = popupCard.querySelector('.close-button');
+            closeButton.addEventListener('click', function() {
+                // Hide the popup card when the close button is clicked
+                popupCard.style.display = 'none';
+            });
+        });
+    });
+});
+

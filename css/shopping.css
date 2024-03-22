@@ -31,82 +31,65 @@ main {
 .row {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align columns to the start */
+    justify-content: flex-start;
     flex-wrap: wrap;
-    margin-left: auto; /* Set left margin to auto */
-    margin-right: auto; /* Set right margin to auto */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #category-row {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    margin-left: auto; /* Set left margin to auto */
-    margin-right: auto; /* Set right margin to auto */
-    margin-top: 20px; /* Optional: Add margin to push it down from the top */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 
-/* Style the column of category-row */
 #category-row .column {
-    text-align: center; /* Center the content horizontally */
-    min-width: 40px; /* Set a minimum width for the column */
-    flex: 1 1 auto; /* Allow the column to grow and shrink */
-    margin: 0 -5px; /* Adjust margin as needed */
+    text-align: center;
+    min-width: 40px;
+    flex: 1 1 auto;
+    margin: 0 -5px;
     max-width: 55px;
     padding-right: 3rem;
-    transition: transform 0.2s ease; /* Add transition for smooth scaling */
+    transition: transform 0.2s ease;
 }
 
 #category-row .column:hover {
-    transform: scale(1.1); /* Scale up the category on hover */
+    transform: scale(1.1);
 }
 
-/* Style the link */
 #category-row .column a {
-    display: block; /* Make the link a block element */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color from parent */
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Style the image */
 #category-row .column img {
         height: auto;
-        max-width: 100%; /* Set a maximum width of 100% of its parent container */
-        min-width: 2rem; /* Set a minimum width for the image */
-        width: auto; /* Allow the image to scale down while maintaining aspect ratio */
+        max-width: 100%;
+        min-width: 2rem;
+        width: auto;
 }
 
-/* Style the paragraph */
 #category-row .column p {
-    margin: 0rem 0rem 0rem 0rem; /* Reset margin */
-    text-align: center; /* Center the text */
-    line-height: 1; /* Adjust line height to vertically center the text */
+    margin: 0rem 0rem 0rem 0rem;
+    text-align: center;
+    line-height: 1;
     font-size: small;
     color: #1A8996
-}
-
-
-#blue {
-    background-color: blue;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.red {
-    background-color: red;
 }
 
 .column {
     text-align: center;
     flex: 0 0 auto;
-    width: calc(10% - 20px); /* Adjust this value as needed */
+    width: calc(10% - 20px);
     margin: 0 10px;
 }
 
 .column img {
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
 }
 
@@ -115,14 +98,14 @@ main {
 }
 
 hr {
-    border: none; /* Remove the default border */
-    border-top: 1px solid #ccc; /* Apply a solid border on the top */
-    margin: 20px 0; /* Add margin above and below the <hr> for spacing */
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
 }
 
 /* Additional styles for cards */
 .card {
-    position: relative; /* Ensure the card is positioned relatively */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,8 +123,8 @@ hr {
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05); /* Move the card 10 pixels up and scale it by 5% on hover */
-    background-color: #f4f4f4; /* Change background color */
+    transform: translateY(-10px) scale(1.05);
+    background-color: #f4f4f4;
     background-image: url('/assets/images/fullnightbg.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -149,22 +132,22 @@ hr {
 }
 
 .card img {
-    position: relative; /* Ensure the image is positioned relatively */
+    position: relative;
     width: 90%;
     margin: -1rem;
-    transition: transform 0.3s ease; /* Add transition for smooth movement */
+    transition: transform 0.3s ease;
 }
 
 .card:hover img {
-    animation: shake 0.7s ease; /* Apply the shake animation on hover */
+    animation: shake 0.7s ease;
 }
 
 @keyframes shake {
-    0% { transform: translateX(0); } /* Start at the original position */
-    25% { transform: translateX(-4px); } /* Move left */
-    50% { transform: translateX(3px); } /* Move right */
-    75% { transform: translateX(-3px); } /* Move left */
-    100% { transform: translateX(0); } /* Return to the original position */
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); } 
 }
 
 .card .card-content {
@@ -176,7 +159,7 @@ hr {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     border-top: 6px solid #24CAAB;
-    position: relative; /* Ensure positioning context for absolute positioning */
+    position: relative; 
 }
 
 .card .title {
@@ -192,10 +175,10 @@ hr {
 }
 
 .cart-button {
-    position: absolute; /* Position absolutely within the container */
-    bottom: 1.8rem; /* Adjust this value as needed */
-    left: 88%; /* Align to the center */
-    transform: translateX(-50%); /* Center horizontally */
+    position: absolute;
+    bottom: 1.8rem;
+    left: 88%;
+    transform: translateX(-50%);
     width: 2rem;
     height: 2rem;
     background-color: #24CAAB;
@@ -213,40 +196,35 @@ hr {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Horizontally center the cards */
-    align-items: center; /* Vertically center the cards */
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    max-width: 1200px; /* Adjust the maximum width as needed */
+    max-width: 1200px;
 }
 
-/* Ensure columns are displayed as flex items */
 .pagination .column {
     display: flex;
     align-items: center;
 }
 
-/* Align items vertically */
 .pagination {
     display: flex;
-    flex-grow: 1; /* Allow the pagination container to grow to fill available space */
-    justify-content: space-between; /* Align items to the start and end of the row */
-    align-items: center; /* Align items vertically */
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
-/* Reset margin */
 .pagination-title {
     margin: 0;
 }
 
-/* Style the title */
 .pagination-title {
     font-size: 2rem;
     font-weight: 700;
     color: #1A8996;
 }
 
-/* Add space between buttons */
 .pagination button {
     margin-left: 10px;
     background: none;
@@ -256,8 +234,8 @@ hr {
 }
 
 .pagination .column .btn-image {
-    width: 30px; /* Set the desired width */
-    height: auto; /* Let the height adjust proportionally */
+    width: 30px;
+    height: auto;
 }
 
 /* Row 3 Stylings */
@@ -412,10 +390,67 @@ hr {
     background-size:cover;
 }
 
+/*Pop-ups*/
+
+.popup-card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    width: 300px;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.popup-item-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.popup-item-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.popup-message {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.close-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.close-button {
+    background-color: #24CAAB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto; 
+    display: block;
+}
+
+.close-button:hover {
+    background-color: #1A8996;
+}
+
+
 /* Media Queries */
-
-
-
 
 @media screen and (max-width: 768px) {
     .card {
