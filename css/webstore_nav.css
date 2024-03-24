@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*NAV*/
+
+nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    font-family: Lato, sans-serif;
+    justify-content: space-between;
+    color: white;
+    z-index: 1;
+}
+
+.wave-container {
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    z-index: -1;
+}
+
+.wave-container > svg {
+    display: block;
+}
+
+nav h1 {
+    font-size: 2em;
+}
+
+#store-options {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 10px;
+}
+
+#store-options li:nth-child(1){
+    background-color: rgba(26, 137, 150, 0.7);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 3px solid #b7eaf0;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 50px;
+    color: #dbf1f3;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+#store-options li:nth-child(1):hover {
+    background: linear-gradient(-45deg, rgba(47,117,122,1) 0%, rgba(77,181,129,1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 3px solid #b7eaf0;
+    color: white;
+    transition: 0.3s;
+}
+
+.store-icon {
+    background-color: rgba(26, 137, 150, 0.7);
+    border: 3px solid #b7eaf0;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.store-icon:hover {
+    background: linear-gradient(-45deg, rgba(47,117,122,1) 0%, rgba(77,181,129,1) 100%);
+}
+
+#cart-icon {
+    padding: 15px 10px 10px 10px;
+    width: 75px;
+}
+
+#prof-icon {
+    padding: 10px;
+    width: 50px;
+}
+
+/*NAV END*/

@@ -1,23 +1,17 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
-    position: sticky;
+    position: relative;
     top: 0;
     width: 100%;
-    z-index: 1000;
-}
-
-.navbar {
-    background-color: #24CAAB;
-    color: white;
-    padding: 5px 20px;
-    height: 60px;
 }
 
 main {
+    margin: 50px 0px;
     padding-top: 60px;
     padding: 20px;
     position: relative;
@@ -25,7 +19,7 @@ main {
 
 .pikachu-image {
     position: absolute;
-    top: -20px;
+    top: -12%;
     right: -20px;
     z-index: 100;
     width: 15rem;

@@ -4,32 +4,29 @@ body {
 }
 
 header {
-    position: sticky;
+    position: absolute;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1;
 }
 
-.navbar {
-    background-color: #24CAAB;
-    color: white;
-    padding: 5px 20px;
-    height: 60px;
-    display: flex;
-    align-items: center;
+main {
+    margin-top: 10svh;
 }
 
 .back-button {
-    margin-left: 1rem;
-    margin-top: 10rem;
+    position: absolute;
+    top: 17%;
+    left: 1%;
+    z-index: 2;
 }
 
 .back-button img {
-    width: 2rem;
-    height: auto;
+    height: 40px;
 }
 
 .listing-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -77,7 +74,7 @@ header {
 }
 
 
-.listing-picture img {
+.listing-picture > img {
     width: 45%;
     display: block;
     padding: 8rem 0rem 8rem 0rem;
@@ -154,8 +151,7 @@ header {
 }
 
 .price-icon {
-    width: 3.5rem;
-    height: auto;
+    width: 75px;
     padding-left: 3rem;
 }
 
@@ -244,7 +240,20 @@ header {
     background-color: #1A8996;
 }
 
-.footer {
-    background-color: #3498db; 
-    height: 100px; 
+
+#credits {
+    height: fit-content;
+    background-color: #0E234A;
+    padding: 4svh 4svw 4svh 4svw;
+    display: grid;
+    color: #FEFEFF;
+    font-family: Lato, sans-serif;
+    font-weight: 200;
+    font-size: 2svh;
+    line-height: 120%;
+    justify-items: center;
+}
+
+#credits > p {
+    text-align: center;
 }

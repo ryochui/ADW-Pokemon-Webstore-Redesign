@@ -44,7 +44,7 @@
     height: 60px;
     width: 60px;
     background-color: #1A8996;
-    z-index: 3;
+    z-index: 6;
     border-radius: 50%;
     border: 2px solid #246873;
 }
@@ -59,7 +59,6 @@
     width: 50px;
     border-radius: 50%;
     background-color: #1A8996;
-    z-index: 2;
     border: 1px solid #b7eaf0;
 }
 
@@ -99,7 +98,7 @@ nav {
     left: -100%;
     flex-direction: column;
     justify-content: space-evenly;
-    z-index: 2;
+    z-index: 3;
     height: 100svh;
     gap: 2rem;
     list-style: none;
@@ -327,6 +326,7 @@ main > section {
 
 #actual-news .active {
     display: block;
+    transition: 300ms;
 }
 
 .slide-circle {
@@ -452,18 +452,148 @@ main > section {
     object-fit: cover;
 }
 
-
+/*pokemon*/
 
 #pokemon {
-    background-color: yellow;
+    position: relative;
+    overflow: hidden;
+    background: rgb(47,117,122);
+    background: linear-gradient(-45deg, rgba(47,117,122,1) 0%, rgba(77,181,129,1) 100%);
+}
+
+#pokemon-bg-wrapper {
+    height: 100svh;
+    width: 100svw;
+    position: relative;
+}
+
+#pokemon-bg-wrapper .pokemon-bg {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#pokemon-bg-wrapper .pokemon-bg.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+#pokemon-bg-wrapper .pokemon-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pokemon-bg-wrapper .pokemon-bg::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(47,117,122,1) 20%, transparent);
+}
+
+#pokemon-bg-wrapper .pokemon-bg .pokemon-content {
+    position: absolute;
+    left: 2rem;
+    top: 15svh;
+    width: 50svw;
+    max-width: 80%;
+    z-index: 1;
+}
+
+#pokemon-bg-wrapper .pokemon-bg .pokemon-content h1{
+    font-family: Roboto Condensed, sans-serif;
+    font-weight: 500;
+    letter-spacing: 10px;
+    font-size: 4em;
+}
+
+#pokemon-bg-wrapper .pokemon-bg .pokemon-content p{
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+#pokemon-bg-wrapper .pokemon-bg .pokemon-content h1 {
+    animation-delay: 1s;
+}
+
+#pokemon-bg-wrapper .pokemon-bg .pokemon-content p {
+    animation-delay: 1.3s;
+}
+
+#pokemon-bg-wrapper .pokemon-bg .pokemon-content h1,
+#pokemon-bg-wrapper .pokemon-bg .pokemon-content p {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+#pokemon-mini-wrapper {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100svw;
+    height: 45svh;
+    z-index: 2;
+}
+
+#pokemon-mini-wrapper .pokemon-card {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    filter: brightness(.5);
+    transition: .5s;
+}
+
+#pokemon-mini-wrapper .pokemon-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pokemon-mini-wrapper .pokemon-card:hover {
+    filter: brightness(0.75);
+}
+
+#pokemon-mini-wrapper .pokemon-card.active {
+    width: 200%;
+    filter: brightness(1);
+}
+
+#pokemon-mini-wrapper .pokemon-card p {
+    font-family: Roboto Condensed, sans-serif;
+    position: absolute;
+    top: 50%;
+    font-size: 2.5em;
+    transform: rotate(-90deg);
+    font-weight: 700;
+    color: white;
 }
 
 #items {
     background-color: orange;
 }
 
+/*GAMEPLAY*/
 
 #gameplay {
+    display: flex;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgb(215,185,237);
@@ -471,9 +601,42 @@ main > section {
     background-blend-mode: multiply;
 }
 
+.swiper {
+    width: 80svw;
+    height: 80svh;
+}
+
+.swiper-slide {
+    display: flex;
+    place-items: center;
+}
+
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev {
+    background-image: url("../assets/icons/arrow_left.svg") !important;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+  
+.swiper-button-next {
+    background-image: url("../assets/icons/arrow_right.svg") !important;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {    
+    color: #fff;
+}
+
 #season {
     background-color: gray;
 }
+
 
 /*credits*/
 
