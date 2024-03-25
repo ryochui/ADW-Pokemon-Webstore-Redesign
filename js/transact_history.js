@@ -122,14 +122,6 @@ document.addEventListener("DOMContentLoaded", function() {
             row.classList.add("hidden");
         });
     }
-    
-    
-    
-    
-    
-
-
-
 
     // Function to handle removal of billing option
     function removeBillingOption() {

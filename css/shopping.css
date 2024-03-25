@@ -455,7 +455,7 @@ hr {
 
 @media screen and (max-width: 768px) {
     .card {
-        width: calc(50% - 1rem); /* Change width to half of the container for screens up to 768px */
+        width: calc(50% - 1rem); 
     }
 
     .popup-card {
@@ -464,10 +464,9 @@ hr {
     }
 }
 
-/* Adjust the layout for even smaller screens */
 @media screen and (max-width: 480px) {
     .card {
-        width: 100%; /* Change width to full width for screens up to 480px */
+        width: 100%;
     }
 
     .popup-card {

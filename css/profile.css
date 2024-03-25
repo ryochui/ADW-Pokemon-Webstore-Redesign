@@ -361,41 +361,41 @@ hr {
 
 @media screen and (max-width: 1350px) {
     .column2 .row {
-        justify-content: center; /* Center the medals horizontally */
+        justify-content: center; 
     }
 
     .column2 img {
-        width: 55px; /* Adjust the width of the medal images */
-        margin: 5px; /* Add margin between the medals */
+        width: 55px; 
+        margin: 5px; 
     }
 }
 
 @media screen and (max-width: 1100px) {
     .column2 .row {
-        justify-content: center; /* Center the medals horizontally */
+        justify-content: center; 
     }
 
     .column2 img {
-        width: 100px; /* Adjust the width of the medal images */
-        margin: 10px; /* Add margin between the medals */
+        width: 100px; 
+        margin: 10px; 
     }
 
     .pokemon-card {
-        max-width: 15rem; /* Adjust the maximum width of the Mewtwo cards */
+        max-width: 15rem; 
     }
 
     .pokemon-card h3 {
-        font-size: 16px; /* Adjust the font size of the heading */
+        font-size: 16px; 
     }
     
     .pokemon-card p {
-        font-size: 9px; /* Adjust the font size of the paragraph */
+        font-size: 9px; 
     }
 
     .pokemon-card .pokemon-img {
-        width: 40%; /* Adjust the width of the image */
-        height: auto; /* Ensure the height adjusts proportionally */
-        margin: 0 auto; /* Center the image horizontally */
+        width: 40%; 
+        height: auto;
+        margin: 0 auto; 
     }
 }
 
@@ -406,61 +406,61 @@ hr {
     }
 
     .pokemon-card {
-        max-width: calc(100% - 20px); /* Adjust the maximum width of the pokemon card */
-        margin-right: 0; /* Remove the right margin to ensure full width */
+        max-width: calc(100% - 20px); 
+        margin-right: 0; 
     }
 
     .pokemon-card .pokemon-info {
-        padding: 14px; /* Adjust the padding of the pokemon info */
+        padding: 14px; 
     }
 
     .pokemon-card h3 {
-        font-size: 1.2rem; /* Adjust the font size of the heading */
+        font-size: 1.2rem; 
     }
 
     .pokemon-card p {
-        font-size: 14px; /* Adjust the font size of the paragraph */
+        font-size: 14px; 
     }
 
     .pokemon-card .pokemon-img {
-        width: 40%; /* Adjust the width of the image */
-        height: auto; /* Ensure the height adjusts proportionally */
-        margin: 0 auto; /* Center the image horizontally */
+        width: 40%; 
+        height: auto;
+        margin: 0 auto;
     }
 
 }
 
 @media screen and (max-width: 900px) {
     .column2 .row {
-        justify-content: center; /* Center the medals horizontally */
+        justify-content: center; 
     }
 
     .column2 img {
-        width: 70px; /* Adjust the width of the medal images */
-        margin: 10px; /* Add margin between the medals */
+        width: 70px; 
+        margin: 10px; 
     }
 
     .pokemon-card {
-        max-width: calc(100% - 20px); /* Adjust the maximum width of the pokemon card */
-        margin-right: 0; /* Remove the right margin to ensure full width */
+        max-width: calc(100% - 20px); 
+        margin-right: 0; 
     }
 
     .pokemon-card .pokemon-info {
-        padding: 10px; /* Adjust the padding of the pokemon info */
+        padding: 10px; 
     }
 
     .pokemon-card h3 {
-        font-size: 20px; /* Adjust the font size of the heading */
+        font-size: 20px;
     }
 
     .pokemon-card p {
-        font-size: 14px; /* Adjust the font size of the paragraph */
+        font-size: 14px; 
     }
 
     .pokemon-card .pokemon-img {
-        width: 40%; /* Adjust the width of the image */
-        height: auto; /* Ensure the height adjusts proportionally */
-        margin: 0 auto; /* Center the image horizontally */
+        width: 40%; 
+        height: auto; 
+        margin: 0 auto; 
     }
 
     .mewrow{
@@ -531,12 +531,12 @@ hr {
     }
 
     .column2 .row {
-            justify-content: center; /* Center the medals horizontally */
+            justify-content: center; 
     }
     
     .column2 img {
-            width: 70px; /* Adjust the width of the medal images */
-            margin: 10px; /* Add margin between the medals */
+            width: 70px; 
+            margin: 10px; 
     }
 
     .mewrow{
@@ -545,7 +545,7 @@ hr {
     }
 
     .pokemon-card h3 {
-        font-size: 1.15rem; /* Adjust the font size of the heading */
+        font-size: 1.15rem; 
     }
 }
 
@@ -564,23 +564,23 @@ hr {
 
     .user-info {
         text-align: center;
-        margin-top: 10px; /* Adjust as needed */
+        margin-top: 10px; 
         margin-left: 10px;
     }
 
     .user-info h2 {
-        font-size: 1.2rem; /* Adjust the font size of the username */
-        margin: 0.5rem 0rem 0rem -1rem; /* Adjust the margins of the username */
+        font-size: 1.2rem; 
+        margin: 0.5rem 0rem 0rem -1rem; 
     }
 
     .user-info p {
-        font-size: 12px; /* Adjust the font size of the user info */
-        margin: 0rem -5rem 0rem -1rem; /* Adjust the margins of the user info */
+        font-size: 12px; 
+        margin: 0rem -5rem 0rem -1rem; 
     }
 
     .follow-btn {
-        font-size: 10px; /* Adjust the font size of the follow button */
-        margin: 0.5rem -5rem 0rem -1rem; /* Adjust the margins of the follow button */
+        font-size: 10px; 
+        margin: 0.5rem -5rem 0rem -1rem; 
     }
 
     .user-bio{
@@ -590,8 +590,8 @@ hr {
     }
 
     .user-bio p {
-        font-size: 11px; /* Adjust the font size of the user bio */
-        padding-left: 1rem; /* Adjust the padding of the user bio */
+        font-size: 11px; 
+        padding-left: 1rem; 
     }
 
     .social {
@@ -627,32 +627,32 @@ hr {
     }
 
     .pokemon-card {
-        max-width: calc(100% - 1rem); /* Adjust the maximum width of the pokemon card */
-        margin-bottom: 10px; /* Add margin bottom to create space between cards */
+        max-width: calc(100% - 1rem);
+        margin-bottom: 10px; 
     }
 
     .pokemon-card .pokemon-info {
-        padding: 10px; /* Adjust the padding of the pokemon info */
+        padding: 10px; 
     }
 
     .pokemon-card h3 {
-        font-size: 1.3rem; /* Adjust the font size of the heading */
+        font-size: 1.3rem; 
     }
 
     .pokemon-card p {
-        font-size: 12px; /* Adjust the font size of the paragraph */
+        font-size: 12px; 
     }
     .column2 .card {
-        padding: 0.5rem; /* Adjust the padding of the card */
+        padding: 0.5rem; 
     }
 
     .column2 h2 {
-        font-size: 20px; /* Adjust the font size of the column2 heading */
+        font-size: 20px; 
     }
 
     .column2 img {
-        width: 6.4rem; /* Adjust the width of the images in column2 */
-        margin-right: 5px; /* Adjust the margin-right of the images in column2 */
+        width: 6.4rem; 
+        margin-right: 5px;
     }
 
     .mewrow{
@@ -679,18 +679,18 @@ hr {
     }
 
     .user-info h2 {
-        font-size: 1rem; /* Adjust the font size of the username */
-        margin: 0rem 0rem 0rem -1rem; /* Adjust the margins of the username */
+        font-size: 1rem; 
+        margin: 0rem 0rem 0rem -1rem; 
     }
 
     .user-info p {
-        font-size: 10px; /* Adjust the font size of the user info */
-        margin: 0rem 0rem 0rem -0.3rem; /* Adjust the margins of the user info */
+        font-size: 10px; 
+        margin: 0rem 0rem 0rem -0.3rem; 
     }
 
     .follow-btn {
-        font-size: 9px; /* Adjust the font size of the follow button */
-        margin: 0.5rem -5rem 0rem -0.3rem; /* Adjust the margins of the follow button */
+        font-size: 9px; 
+        margin: 0.5rem -5rem 0rem -0.3rem; 
     }
 
     .user-bio{
@@ -700,8 +700,8 @@ hr {
     }
 
     .user-bio p {
-        font-size: 11px; /* Adjust the font size of the user bio */
-        padding-left: 1rem; /* Adjust the padding of the user bio */
+        font-size: 11px; 
+        padding-left: 1rem; 
     }
 
     .social {
@@ -715,14 +715,14 @@ hr {
     .user-stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px; /* Adjust gap as needed */
-        margin-bottom: 20px; /* Adjust as needed */
+        gap: 10px; 
+        margin-bottom: 20px; 
     }
 
     .user-stats .stat {
         width: auto;
-        border-right: none; /* Remove right border */
-        padding-right: 0; /* Remove right padding */
+        border-right: none; 
+        padding-right: 0; 
         text-align: center;
     }
 
@@ -734,24 +734,24 @@ hr {
 
 @media screen and (max-width: 373px) {
     .column2 img {
-        width: 4rem; /* Adjust the width of the images in column2 */
-        margin-right: 5px; /* Adjust the margin-right of the images in column2 */
+        width: 4rem; 
+        margin-right: 5px; 
     }
 
     .pokemon-card {
-        max-width: calc(100% - 1rem); /* Adjust the maximum width of the pokemon card */
-        margin-bottom: 10px; /* Add margin bottom to create space between cards */
+        max-width: calc(100% - 1rem); 
+        margin-bottom: 10px; 
     }
 
     .pokemon-card .pokemon-info {
-        padding: 10px; /* Adjust the padding of the pokemon info */
+        padding: 10px; 
     }
 
     .pokemon-card h3 {
-        font-size: 16px; /* Adjust the font size of the heading */
+        font-size: 16px; 
     }
 
     .pokemon-card p {
-        font-size: 10px; /* Adjust the font size of the paragraph */
+        font-size: 10px; 
     }
 }

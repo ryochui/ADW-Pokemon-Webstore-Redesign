@@ -414,7 +414,7 @@ a {
     }
     
     .box {
-        margin: 5px 0px 20px 0px; /* Adjust margin for smaller screens */
+        margin: 5px 0px 20px 0px;
     }
 
     #items, 
@@ -424,24 +424,24 @@ a {
     }
     
     .item-row {
-        flex-direction: row; /* Arrange items vertically */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: row;
+        align-items: flex-start;
     }
     
     .item-name {
-        margin-left: 0; /* Reset margin */
-        margin-top: 10px; /* Add margin to the top */
-        width: auto; /* Auto width */
+        margin-left: 0;
+        margin-top: 10px;
+        width: auto;
     }
     
     .item-price,
     .item-total {
-        width: auto; /* Auto width */
-        text-align: left; /* Align text to the left */
+        width: auto;
+        text-align: left;
     }
     
     .item-quantity {
-        margin-top: 10px; /* Add margin to the top */
+        margin-top: 10px;
     }
 
     #price-title{
@@ -479,11 +479,11 @@ a {
 
 @media only screen and (max-width: 800px) {
     .checkout-content {
-        grid-template-columns: 1fr; /* Change to single column layout */
+        grid-template-columns: 1fr;
     }
     
     .box {
-        margin: 5px 0px 20px 0px; /* Adjust margin for smaller screens */
+        margin: 5px 0px 20px 0px;
     }
 
     #items, 
@@ -493,34 +493,34 @@ a {
     }
     
     .item-row {
-        flex-direction: row; /* Arrange items vertically */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: row;
+        align-items: flex-start;
     }
     
     .item-name {
-        margin-left: 0; /* Reset margin */
-        margin-top: 10px; /* Add margin to the top */
-        width: auto; /* Auto width */
+        margin-left: 0;
+        margin-top: 10px;
+        width: auto;
     }
 
     .item-name {
-        margin-left: 0; /* Reset margin */
-        margin-top: 10px; /* Add margin to the top */
-        width: auto; /* Auto width */
-        max-width: 60px; /* Limit maximum width */
-        white-space: nowrap; /* Prevent wrapping */
-        overflow: hidden; /* Hide overflow */
-        text-overflow: ellipsis; /* Display ellipsis for overflow */
+        margin-left: 0;
+        margin-top: 10px; 
+        width: auto; 
+        max-width: 60px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .item-price,
     .item-total {
-        width: auto; /* Auto width */
-        text-align: left; /* Align text to the left */
+        width: auto;
+        text-align: left;
     }
     
     .item-quantity {
-        margin-top: 10px; /* Add margin to the top */
+        margin-top: 10px;
     }
 
     #price-title{
@@ -601,22 +601,19 @@ a {
     }
     
     .quantity-btn {
-        font-size: 16px; /* Adjust font size of quantity buttons */
+        font-size: 16px;
         font-weight: 700;
         padding: 0;
     }
     
     .quantity-circle {
-        font-size: 12px; /* Adjust font size of quantity display */
+        font-size: 12px;
         width: 15px;
         height: 15px;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .item-photo {
-        
-    }
 
     .item-row-title{
         margin-bottom: 1rem;
@@ -634,7 +631,7 @@ a {
     .item-name {
         margin-top: 1.5rem;
         font-size: 14px;
-        max-width: 70px; /* Limit width to 40px */
+        max-width: 70px;
     }
 
     .item-quantity{
@@ -655,62 +652,62 @@ a {
     }
 
     .quantity-btn {
-        font-size: 16px; /* Adjust font size of quantity buttons */
+        font-size: 16px;
         font-weight: 700;
         padding: 0;
     }
 
     .quantity-circle {
-        font-size: 12px; /* Adjust font size of quantity display */
+        font-size: 12px;
         width: 15px;
         height: 15px;
     }
 
     #order-summary * {
-        font-size: 14px; /* Adjust the font size as needed */
+        font-size: 14px;
     }
 
-    /* Adjust the size and layout of the discount code card */
+    
     #discount-code {
-        padding: 10px; /* Adjust padding as needed */
-        font-size: 14px; /* Adjust font size as needed */
-        display: flex; /* Change display to flex */
-        flex-direction: column; /* Arrange contents in columns */
-        justify-content: center; /* Center items horizontally */
-        align-items: flex-start; /* Align items to the start of the column */
+        padding: 10px; 
+        font-size: 14px; 
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: flex-start; 
     }
 
-    /* Adjust the style of the discount input and apply button */
+    
     .discount-code-entry {
         display: flex;
-        flex-direction: column; /* Arrange contents in columns */
+        flex-direction: column; 
     }
 
     .discount-code-entry input {
-        width: calc(100% - 20px); /* Make the input fill the available width */
-        padding: 10px; /* Adjust padding as needed */
-        margin-bottom: 10px; /* Add spacing between input and button */
-        border-radius: 10px; /* Add border-radius */
-        border: 1px solid #ccc; /* Add border */
+        width: calc(100% - 20px); 
+        padding: 10px; 
+        margin-bottom: 10px; 
+        border-radius: 10px; 
+        border: 1px solid #ccc; 
         align-items: center;
     }
 
     .discount-code-entry button {
-        width: calc(100% - 20px); /* Make the button fill the available width */
-        padding: 10px; /* Adjust padding as needed */
-        border-radius: 10px; /* Add border-radius */
-        border: none; /* Remove border */
-        background-color: #24CAAB; /* Button background color */
-        color: white; /* Button text color */
-        cursor: pointer; /* Add cursor pointer */
-        transition: background-color 0.3s ease; /* Add transition */
+        width: calc(100% - 20px); 
+        padding: 10px; 
+        border-radius: 10px; 
+        border: none;
+        background-color: #24CAAB; 
+        color: white; 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
     .discount-code-entry button:hover {
-        background-color: #1A8996; /* Change background color on hover */
+        background-color: #1A8996;
     }
 
     .discount-code-entry button:active {
-        background-color: #0F4C52; /* Change background color on click */
+        background-color: #0F4C52;
     }
 }

@@ -358,41 +358,41 @@ input[type="password"]:focus {
 
 @media screen and (max-width: 1350px) {
     .column2 .row {
-        justify-content: center; /* Center the medals horizontally */
+        justify-content: center;
     }
 
     .column2 img {
-        width: 55px; /* Adjust the width of the medal images */
-        margin: 5px; /* Add margin between the medals */
+        width: 55px;
+        margin: 5px;
     }
 }
 
 @media screen and (max-width: 1100px) {
     .column2 .row {
-        justify-content: center; /* Center the medals horizontally */
+        justify-content: center;
     }
 
     .column2 img {
-        width: 100px; /* Adjust the width of the medal images */
-        margin: 10px; /* Add margin between the medals */
+        width: 100px;
+        margin: 10px;
     }
 
     .pokemon-card {
-        max-width: 15rem; /* Adjust the maximum width of the Mewtwo cards */
+        max-width: 15rem;
     }
 
     .pokemon-card h3 {
-        font-size: 16px; /* Adjust the font size of the heading */
+        font-size: 16px;
     }
     
     .pokemon-card p {
-        font-size: 9px; /* Adjust the font size of the paragraph */
+        font-size: 9px;
     }
 
     .pokemon-card .pokemon-img {
-        width: 40%; /* Adjust the width of the image */
-        height: auto; /* Ensure the height adjusts proportionally */
-        margin: 0 auto; /* Center the image horizontally */
+        width: 40%;
+        height: auto; 
+        margin: 0 auto; 
     }
 }
 
@@ -403,26 +403,26 @@ input[type="password"]:focus {
     }
 
     .pokemon-card {
-        max-width: calc(100% - 20px); /* Adjust the maximum width of the pokemon card */
-        margin-right: 0; /* Remove the right margin to ensure full width */
+        max-width: calc(100% - 20px);
+        margin-right: 0;
     }
 
     .pokemon-card .pokemon-info {
-        padding: 14px; /* Adjust the padding of the pokemon info */
+        padding: 14px;
     }
 
     .pokemon-card h3 {
-        font-size: 1.2rem; /* Adjust the font size of the heading */
+        font-size: 1.2rem;
     }
 
     .pokemon-card p {
-        font-size: 14px; /* Adjust the font size of the paragraph */
+        font-size: 14px; 
     }
 
     .pokemon-card .pokemon-img {
-        width: 40%; /* Adjust the width of the image */
-        height: auto; /* Ensure the height adjusts proportionally */
-        margin: 0 auto; /* Center the image horizontally */
+        width: 40%; 
+        height: auto;
+        margin: 0 auto; 
     }
 
 }

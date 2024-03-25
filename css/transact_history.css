@@ -20,15 +20,21 @@ header {
 main {
     padding-top: 60px;
     padding: 20px;
-    display: flex; /* Use flexbox to align content boxes side by side */
+    display: flex;
+    background-color: #ffffff;
+}
+
+a{
+    text-decoration: none;
 }
 
 .purchase-history {
-    width: 66.66%; /* 2/3 of the screen */
-    background-color: #f6f6f6; /* Light gray background */
-    border-radius: 20px; /* Rounded corners */
+    width: 66.66%;
+    background-color: rgba(255, 255, 255, 0.85); 
+    border-radius: 20px; 
     padding: 20px;
-    margin-right: 20px; /* Add margin to create space between content boxes */
+    margin-right: 20px;
+    box-shadow: 0px 0px 4px #9e9e9e;
 }
 
 .purchase-content {
@@ -51,25 +57,31 @@ main {
 }
 
 .purchase-history hr {
-    margin: 10px 0; /* Add some margin above and below the horizontal line */
+    margin: 10px 0; 
 }
 
 .item-photo {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border-radius: 20px; /* Rounded corners */
-    overflow: hidden; /* Ensure photo stays within the container */
+    width: 100px; 
+    height: 100px; 
+    border-radius: 20px; 
+    overflow: hidden; 
+}
+
+.item-photo img {
+    max-width: 100px; 
+    margin: auto;
+    transition: transform 0.3s ease; 
 }
 
 .photo-details {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire container */
+    object-fit: cover; 
 }
 
 .item-details {
-    flex-grow: 1; /* Make this column take up remaining space */
-    margin-left: 20px; /* Add some space between photo and text */
+    flex-grow: 1; 
+    margin-left: 20px; 
 }
 
 .item-name {
@@ -77,8 +89,9 @@ main {
 }
 
 .item-description {
-    color: #555; /* Gray color for description */
+    color: #555; 
     font-size: 14px;
+    max-width: 25rem;
 }
 
 .item-price {
@@ -89,22 +102,23 @@ main {
 .pagination-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px; /* Add some margin between the buttons and transactions */
+    margin-top: 20px;
 }
 
 #prevBtn,
 #nextBtn {
-    width: 48%; /* Adjust button width as needed */
+    width: 48%; 
 }
 
 .billing-information {
-    width: 33.33%; /* 1/3 of the screen */
-    background-color: #ddd; /* Gray background color */
-    border-radius: 20px; /* Rounded corners */
+    width: 33.33%; 
+    background-color: #ddd; 
+    border-radius: 20px; 
     padding: 20px;
 }
 
-.billing-option {
+.billing-option,
+.new-billing-option {
     margin-top: 20px;
 }
 
@@ -114,8 +128,14 @@ main {
     margin-bottom: 10px;
 }
 
-.card-logo {
-    /* Styles for card logo */
+.card-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-logo img {
+    max-width: 100px;
 }
 
 .card-title {
@@ -148,45 +168,35 @@ main {
     margin-right: 10px;
 }
 
-.save-btn {
-    /* Button styles */
-}
-
 .card-logos {
     display: flex;
 }
 
 .card-logos img {
-    width: 50px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add spacing between logos */
+    width: 50px; 
+    height: auto; 
+    margin-right: 10px; 
 }
 
 /* Add styling for new-billing-option class */
-.new-billing-option {
-    background-color: #ddd; /* Gray background color */
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px;
-    margin-top: 20px; /* Add margin to separate from previous billing option */
-}
 
 .new-billing-option h2 {
-    font-size: 20px; /* Adjust font size as needed */
-    margin-bottom: 10px; /* Add some space below the title */
+    font-size: 20px; 
+    margin-bottom: 10px; 
 }
 
 .new-billing-option .card-logos {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px; /* Add some space below the card logos */
+    margin-bottom: 10px; 
 }
 
 .new-billing-option .card-logo {
-    width: 50px; /* Adjust width as needed */
-    height: 50px; /* Adjust height as needed */
-    border-radius: 50%; /* Make the logos circular */
-    background-color: #fff; /* White background */
-    border: 1px solid #ccc; /* Gray border */
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,30 +209,326 @@ main {
 }
 
 .new-billing-option .billing-row .card-type {
-    margin-right: 10px; /* Add some space between card type dropdown and other fields */
+    margin-right: 10px; 
 }
 
 .new-billing-option .billing-row .expires-label {
-    margin-right: 10px; /* Add some space between expiration date label and input fields */
+    margin-right: 10px; 
 }
 
 .new-billing-option .billing-row input[type="text"],
 .new-billing-option .billing-row select {
-    width: 100px; /* Adjust width as needed */
-    padding: 5px; /* Add padding to input fields */
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;/
 }
 
 .new-billing-option .billing-row .save-new-btn {
-    padding: 5px 10px; /* Add padding to save button */
-    background-color: #24CAAB; /* Green background color */
-    color: #fff; /* White text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Add pointer cursor */
+    padding: 5px 10px; 
+    background-color: #24CAAB; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
 
 .footer {
-    background-color: #3498db; /* Blue color for the footer */
-    height: 100px; /* Adjust the height as needed */
+    background-color: #3498db; 
+    height: 100px; 
+}
+
+/* Billing Information Styles */
+.billing-information {
+    background-color: rgba(253, 253, 253, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.billing-information h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.billing-option,
+.new-billing-option {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 2px #555;
+}
+
+.card-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-logo img {
+    max-width: 100px;
+}
+
+.card-type select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.billing-row input[type="text"],
+.billing-row select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.billing-row input[type="text"]:focus,
+.billing-row select:focus {
+    border-color: #24CAAB; 
+}
+
+
+.expires-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+    padding-top: 0.5rem;
+}
+
+.security-code {
+    width: calc(50% - 5px);
+    margin-right: 5px;
+}
+
+
+.save-new:hover,
+.save-btn:hover {
+    background-color: #1A8996;
+}
+
+.save-new:focus,
+.save-btn:focus {
+    outline: none;
+}
+
+.edit-btn,
+.remove-btn,
+.save-new,
+.save-btn {
+    background-color: #24CAAB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.edit-btn:hover,
+.remove-btn:hover,
+.save-new:hover,
+.save-btn:hover {
+    background-color: #1A8996;
+}
+
+.edit-btn:focus,
+.remove-btn:focus,
+.save-new:focus,
+.save-btn:focus {
+    outline: none;
+}
+
+.card-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-logo img {
+    max-width: 100px; 
+    margin: auto;
+    transition: transform 0.3s ease; 
+}
+
+.card-logo {
+    border-radius: 5px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
+    background-color: #fff; 
+}
+
+.card-logo:hover {
+    transform: translateY(-2px); 
+    transform: scale(1.3); 
+}
+
+.card-type select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #fff; 
+    color: #333;
+    cursor: pointer; 
+    transition: border-color 0.3s ease;
+}
+
+.card-type select:focus {
+    outline: none;
+    border-color: #24CAAB; 
+}
+
+.card-type select option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #fff; 
+    color: #333; 
+}
+
+.card-type select option:hover {
+    background-color: #f0f0f0;
+}
+
+#prevBtn,
+#nextBtn {
+    background-color: #24CAAB; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    margin-top: 1rem;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    background-color: #1A8996; 
+}
+
+#prevBtn:focus,
+#nextBtn:focus {
+    outline: none; 
+}
+
+/** MEDIA QUERIES **/
+
+@media screen and (max-width: 1190px) {
+    main {
+        flex-direction: column; 
+    }
+
+    .purchase-history,
+    .billing-information {
+        width: calc(100% - 40px);
+        margin: auto;
+    }
+
+    .billing-information {
+        margin-top: 20px; 
+    }
+
+    .card-logo img{
+        max-width: 200px;
+    }
+
+    .card-logos img{
+        width: 100px;
+    }
+
+    .new-billing-option .card-logo{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .item-description {
+        color: #555; 
+        font-size: 12px;
+        max-width: 20rem;
+    }
+
+    .card-logo img{
+        max-width: 100px;
+    }
+
+    .card-logos img{
+        width: 60px;
+    }
+
+    .new-billing-option .card-logo{
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 579px) {
+    .item-description {
+        color: #555; 
+        font-size: 12px;
+        max-width: 15rem;
+    }
+
+    .card-logo img{
+        max-width: 50px;
+    }
+
+    .card-logos img{
+        width: 35px;
+    }
+
+    .new-billing-option .card-logo{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .item-description {
+        color: #555; 
+        font-size: 12px;
+        max-width: 10rem;
+    }
+
+    .card-title,
+   .added-date{
+    display: none;
+   }
+
+}
+
+@media screen and (max-width: 463px) {
+
+   .billing-row{
+    justify-content: space-between;
+   }
+
+   .item-description {
+    color: #555; 
+    font-size: 11px;
+    max-width: 8rem;
+}
+
 }

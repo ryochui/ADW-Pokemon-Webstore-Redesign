@@ -31,55 +31,51 @@ main {
 .row {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align columns to the start */
+    justify-content: flex-start;
     flex-wrap: wrap;
-    margin-left: auto; /* Set left margin to auto */
-    margin-right: auto; /* Set right margin to auto */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #category-row {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    margin-left: auto; /* Set left margin to auto */
-    margin-right: auto; /* Set right margin to auto */
-    margin-top: 20px; /* Optional: Add margin to push it down from the top */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 
-/* Style the column of category-row */
 #category-row .column {
-    text-align: center; /* Center the content horizontally */
-    min-width: 40px; /* Set a minimum width for the column */
-    flex: 1 1 auto; /* Allow the column to grow and shrink */
-    margin: 0 -5px; /* Adjust margin as needed */
+    text-align: center;
+    min-width: 40px;
+    flex: 1 1 auto;
+    margin: 0 -5px;
     max-width: 55px;
     padding-right: 3rem;
-    transition: transform 0.2s ease; /* Add transition for smooth scaling */
+    transition: transform 0.2s ease;
 }
 
 #category-row .column:hover {
-    transform: scale(1.1); /* Scale up the category on hover */
+    transform: scale(1.1); 
 }
 
-/* Style the link */
 #category-row .column a {
-    display: block; /* Make the link a block element */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color from parent */
+    display: block;
+    text-decoration: none; 
+    color: inherit; 
 }
 
-/* Style the image */
 #category-row .column img {
         height: auto;
-        max-width: 100%; /* Set a maximum width of 100% of its parent container */
-        min-width: 2rem; /* Set a minimum width for the image */
-        width: auto; /* Allow the image to scale down while maintaining aspect ratio */
+        max-width: 100%; 
+        min-width: 2rem; 
+        width: auto; 
 }
 
-/* Style the paragraph */
 #category-row .column p {
-    margin: 0rem 0rem 0rem 0rem; /* Reset margin */
-    text-align: center; /* Center the text */
-    line-height: 1; /* Adjust line height to vertically center the text */
+    margin: 0rem 0rem 0rem 0rem; 
+    text-align: center; 
+    line-height: 1; 
     font-size: small;
     color: #1A8996
 }
@@ -87,13 +83,13 @@ main {
 .column {
     text-align: center;
     flex: 0 0 auto;
-    width: calc(70% - 20px); /* Adjust this value as needed */
+    width: calc(70% - 20px); 
     margin: 0 10px;
 }
 
 .column img {
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
+    width: 80px; 
+    height: 80px; 
     margin-bottom: 10px;
 }
 
@@ -102,9 +98,9 @@ main {
 }
 
 hr {
-    border: none; /* Remove the default border */
-    border-top: 1px solid #ccc; /* Apply a solid border on the top */
-    margin: 20px 0; /* Add margin above and below the <hr> for spacing */
+    border: none; 
+    border-top: 1px solid #ccc; 
+    margin: 20px 0; 
 }
 
 .card {
@@ -130,9 +126,9 @@ hr {
 }
 
 .card:hover {
-    transform: scale(1.2); /* Scale up the card on hover */
-    z-index: 1; /* Ensure the hovered card appears on top of others */
-    background-image: url('/assets/images/fullbg3.jpg'); /* Add background image */
+    transform: scale(1.2); 
+    z-index: 1; 
+    background-image: url('/assets/images/fullbg3.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -141,13 +137,13 @@ hr {
     position: relative;
     width: 90%;
     margin: -1rem;
-    transition: transform 0.4s ease; /* Keep the image shake transition */
+    transition: transform 0.4s ease; 
 }
 
 .card .overlay {
     position: absolute;
     top: 0;
-    left: -100%; /* Start off-screen to the left */
+    left: -100%; 
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -156,13 +152,13 @@ hr {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: transform 0.4s ease, opacity 0.3s ease, left 0.3s ease; /* Add left transition */
+    transition: transform 0.4s ease, opacity 0.3s ease, left 0.3s ease; 
 }
 
 .card:hover .overlay {
     transform: translateY(0);
     opacity: 1;
-    left: 0; /* Slide in from the left */
+    left: 0; 
 }
 
 .card:hover{
@@ -170,23 +166,23 @@ hr {
 }
 
 .card:hover img {
-    transform: scale(1.1); /* Scale up the image on hover */
-    transition: transform 0.4s ease; /* Add transition for smooth scaling */
+    transform: scale(1.1); 
+    transition: transform 0.4s ease; 
 }
 
 .card .overlay .title {
-    color: white; /* Text color */
-    font-size: 1.5rem; /* Font size */
-    margin-bottom: 0.5rem; /* Spacing between title and price */
-    font-weight: bold; /* Bold font */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    color: white; 
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .card .overlay .price {
-    color: white; /* Text color */
-    font-size: 1rem; /* Font size */
-    font-style: italic; /* Italic font */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+    color: white; 
+    font-size: 1rem; 
+    font-style: italic; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .card .overlay .price-container {
@@ -195,9 +191,9 @@ hr {
 }
 
 .card .overlay .price-icon {
-    width: 20px; /* Adjust the size of the icon as needed */
+    width: 20px; 
     height: auto;
-    margin-right: 5px; /* Add some space between the icon and the price */
+    margin-right: 5px; 
 }
 
 .card .title {
@@ -215,33 +211,29 @@ hr {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Horizontally center the cards */
-    align-items: center; /* Vertically center the cards */
+    justify-content: center; 
+    align-items: center; 
     margin: auto;
-    max-width: 1200px; /* Adjust the maximum width as needed */
+    max-width: 1200px; 
 }
 
-/* Ensure columns are displayed as flex items */
 .pagination .column {
     display: flex;
     align-items: center;
 }
 
-/* Align items vertically */
 .pagination {
     display: flex;
-    flex-grow: 1; /* Allow the pagination container to grow to fill available space */
-    justify-content: space-between; /* Align items to the start and end of the row */
-    align-items: center; /* Align items vertically */
+    flex-grow: 1; 
+    justify-content: space-between; 
+    align-items: center; 
     margin-bottom: 1rem;
 }
 
-/* Reset margin */
 .pagination-title {
     margin: 0;
 }
 
-/* Style the title */
 .pagination-title {
     font-size: 2rem;
     font-weight: 700;
@@ -250,13 +242,12 @@ hr {
 
 @media screen and (max-width: 768px) {
     .card {
-        width: calc(50% - 1rem); /* Change width to half of the container for screens up to 768px */
+        width: calc(50% - 1rem); 
     }
 }
 
-/* Adjust the layout for even smaller screens */
 @media screen and (max-width: 480px) {
     .card {
-        width: 100%; /* Change width to full width for screens up to 480px */
+        width: 100%;
     }
 }
