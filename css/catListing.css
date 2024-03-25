@@ -25,6 +25,13 @@ main {
     height: 40px;
 }
 
+ a{
+    color: inherit; /* or specify the color you want */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
 .listing-container {
     position: relative;
     display: flex;
@@ -77,7 +84,7 @@ main {
 .listing-picture > img {
     width: 45%;
     display: block;
-    padding: 8rem 0rem 8rem 0rem;
+    padding: 9rem 0rem 8rem 0rem;
     margin: auto;
 }
 
@@ -97,13 +104,13 @@ main {
 .name{
     font-size: 3.5rem;
     font-weight: 700;
-    padding-top: 6rem;
+    padding-top: 9rem;
     color: #1A8996;
 
 }
 
 .description{
-    margin-top: -7rem;
+    margin-top: -4rem;
     color: #1A8996;
     font-size: 1.2rem;
     padding: 1rem 5rem 0rem 5rem;
