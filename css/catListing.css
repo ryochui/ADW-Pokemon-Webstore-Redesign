@@ -11,7 +11,7 @@ header {
 }
 
 main {
-    margin-top: 10svh;
+    margin-top: 10vh;
 }
 
 .back-button {
@@ -23,13 +23,6 @@ main {
 
 .back-button img {
     height: 40px;
-}
-
- a{
-    color: inherit; /* or specify the color you want */
-    text-decoration: none;
-    display: flex;
-    align-items: center;
 }
 
 .listing-container {
