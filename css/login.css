@@ -46,8 +46,9 @@ main {
 .rounded-border {
     border-radius: 10px;
     overflow: hidden;
-    margin: 20px;
+    margin: 70px 20px 20px 20px;
     position: relative;
+    
 }
 
 .container {

@@ -156,7 +156,6 @@ input[type="password"]:focus {
 #forget-link{
     text-decoration: underline;
     color:#1A8996;
-    
 }
 
 .title-one{
@@ -234,6 +233,14 @@ a .link{
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+    }
+
+    .pikachu-image {
+        position: absolute;
+        top: -6.5%;
+        right: -20px;
+        z-index: 100;
+        width: 15rem;
     }
 }
 

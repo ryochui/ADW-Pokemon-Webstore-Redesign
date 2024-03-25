@@ -95,7 +95,7 @@ nav h1 {
     width: 50px;
 }
 
-a{
+nav > a{
     color: inherit; /* or specify the color you want */
     text-decoration: none;
     align-items: center;
@@ -131,8 +131,6 @@ a{
     }
 }
 
-/* Adjustments for smaller screens */
-/* Adjustments for smaller screens */
 @media (max-width: 515px) {
     #store-options li:nth-child(1),
     #store-options li:nth-child(2) {

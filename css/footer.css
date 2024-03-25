@@ -1,0 +1,16 @@
+#credits {
+    height: fit-content;
+    background-color: #0E234A;
+    padding: 4svh 4svw 4svh 4svw;
+    display: grid;
+    color: #FEFEFF;
+    font-family: Lato, sans-serif;
+    font-weight: 200;
+    font-size: 2svh;
+    line-height: 120%;
+    justify-items: center;
+}
+
+#credits > p {
+    text-align: center;
+}
