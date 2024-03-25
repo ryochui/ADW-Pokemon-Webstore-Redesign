@@ -17,10 +17,14 @@ header {
     height: 60px;
 }
 
+a{
+    text-decoration: none;
+}
+
 main {
-    padding-top: 60px;
     padding-left: 3rem;
     padding-right: 3rem;
+    margin-bottom: 5rem;
 }
 
 .footer {
@@ -47,11 +51,11 @@ main {
 
 #category-row .column {
     text-align: center;
-    min-width: 40px;
+    min-width: 80px;
     flex: 1 1 auto;
-    margin: 0 -5px;
+    margin: 0;
     max-width: 55px;
-    padding-right: 3rem;
+    padding-right: 1.9rem;
     transition: transform 0.2s ease;
 }
 

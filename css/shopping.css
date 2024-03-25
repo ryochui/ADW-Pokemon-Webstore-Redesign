@@ -19,8 +19,12 @@ header {
 
 main {
     padding-top: 60px;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 .footer {
@@ -47,16 +51,16 @@ main {
 
 #category-row .column {
     text-align: center;
-    min-width: 40px;
+    min-width: 80px;
     flex: 1 1 auto;
-    margin: 0 -5px;
+    margin: 0;
     max-width: 55px;
-    padding-right: 3rem;
+    padding-right: 1.9rem;
     transition: transform 0.2s ease;
 }
 
 #category-row .column:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 #category-row .column a {
@@ -134,7 +138,6 @@ hr {
 .card img {
     position: relative;
     width: 90%;
-    margin: -1rem;
     transition: transform 0.3s ease;
 }
 
@@ -189,7 +192,6 @@ hr {
 
 #cart{
     width: 1.9rem;
-    padding: 1rem 1rem 1rem 0.8rem;
 }
 
 
@@ -249,10 +251,15 @@ hr {
 .advert {
     margin-top: 4rem;
     margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.container-card {
+.container-card,
+.container-card-2 {
     display: flex;
+    flex: 1 1 100%;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
@@ -342,7 +349,8 @@ hr {
 
 .mini-card {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -352,6 +360,7 @@ hr {
 
 .mini-card .column {
     flex: 1;
+    width: 70%;
 }
 
 .mini-card img {
@@ -368,7 +377,7 @@ hr {
 }
 
 .mini-card .mini-pic{
-    width: 6rem;
+    max-width: 100%;
     height: auto;
 }
 
@@ -453,7 +462,32 @@ hr {
 
 /* Media Queries */
 
+@media screen and (max-width: 1000px){
+    .mini-pic{
+        display: none;
+    }
+
+    .mini-card {
+        flex-direction: column; /* Change flex direction to column */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        margin-top: 1rem;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
+    .mini-pic{
+        display:flex
+    }
+
+    .pagination{
+        flex-grow: unset;
+    }
+
+    #prev-button{
+        margin-left: 9rem;
+    }
     .card {
         width: calc(50% - 1rem); 
     }
@@ -462,9 +496,103 @@ hr {
         width: 90%;
         padding: 20px;
     }
+
+    .container-card,
+    .container-card-2 {
+        flex: 1 1 45%;
+    }
+
+    .mini-card {
+        flex: 1 1 100%;
+    }
+
+    advert {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-card,
+    .container-card-2 {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .container-card .column,
+    .container-card-2 .column {
+        width: 100%;
+    }
+
+    .card-desc{
+        margin-left: 6rem;
+    }
+
+    .mini-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .mini-card .column {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 664px) {
+
+    #prev-button{
+        margin-left: 7rem;
+    }
+}
+
+@media screen and (max-width: 606px) {
+
+    #prev-button{
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (max-width: 543px) {
+
+    #prev-button{
+        margin-left: 3rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
+
+    main {
+        padding-top: 60px;
+        padding-left: 1rem;
+        padding-right: 3rem;
+    }
+
+    .pagination-title{
+        padding-right: 7rem;
+    }
+
+    #chara {
+        height: 30rem !important;
+        width: auto;
+        margin-top: 1rem;
+    }
+
+    .container-card .title, .container-card-2 .title {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 3px #5c5c5c;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 1rem;
+        color: white;
+
+    }
+
+    #prev-button{
+        margin-left: 0rem;
+    }
+
     .card {
         width: 100%;
     }
@@ -472,5 +600,81 @@ hr {
     .popup-card {
         width: 95%;
         padding: 15px; 
+    }
+
+    .container-card,
+    .container-card-2 {
+        flex: 1 1 100%;
+    }
+
+    .mini-card {
+        flex: 1 1 100%;
+    }
+
+    .container-card .description,
+    .container-card-2 .description {
+        text-align: left;
+        text-shadow: 2px 2px 3px #5c5c5c;
+        margin-bottom: 1rem;
+        color: white;
+        font-size: 0.8rem;
+        max-width: 200px;
+    }
+
+    .container-card .mini-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 1rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .container-card-2 .mini-title {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 1rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .container-card .mini-description,
+    .container-card-2 .mini-description {
+        text-align: left;
+        margin-bottom: 1rem;
+        color: rgb(0, 0, 0);
+        font-size: 0.9rem;
+    }
+
+    .container-card-2 .mini-description{
+        font-size: 0.7rem;
+        max-width: 200px;
+    }
+
+    .container-card .shop-now-button,
+    .container-card-2 .shop-now-button {
+        background-color: #ffffff;
+        color: #24CAAB;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: background-color 0.3s ease;
+    }
+
+    .container-card .shop-now-button:hover,
+    .container-card-2 .shop-now-button:hover {
+        background-color: #000000;
+    }
+
+    .container-card .shop-now-button:active,
+    .container-card-2 .shop-now-button:active {
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+    #prev-button{
+        margin-left: -2.5rem;
     }
 }
