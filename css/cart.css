@@ -17,6 +17,10 @@ header {
     height: 60px;
 }
 
+a{
+    text-decoration: none;
+}
+
 main {
     padding-top: 60px;
     padding: 20px;
@@ -80,6 +84,19 @@ main {
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
+}
+
+#input-discount-title {
+    margin-bottom: 1rem;
+    margin-top: 1rem
+}
+
+#adjust-1{
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+#adjust-2{
+    margin: 1rem 1rem 1rem 0.5rem;
 }
 
 .item-row-title{
@@ -159,7 +176,7 @@ main {
 .item-row-headers {
     display: flex;
     padding: 10px 0;
-    margin-bottom: -20px;
+    margin-bottom: -5px;
     justify-content:space-evenly;
     align-items: center;
 }
@@ -391,3 +408,309 @@ a {
     height: 100px; 
 }
 
+@media only screen and (max-width: 1300px) {
+    .checkout-content {
+        grid-template-columns: 1fr; /* Change to single column layout */
+    }
+    
+    .box {
+        margin: 5px 0px 20px 0px; /* Adjust margin for smaller screens */
+    }
+
+    #items, 
+    #discount-code,
+    #order-summary {
+        margin: 1rem 2rem 1rem 2rem;
+    }
+    
+    .item-row {
+        flex-direction: row; /* Arrange items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .item-name {
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px; /* Add margin to the top */
+        width: auto; /* Auto width */
+    }
+    
+    .item-price,
+    .item-total {
+        width: auto; /* Auto width */
+        text-align: left; /* Align text to the left */
+    }
+    
+    .item-quantity {
+        margin-top: 10px; /* Add margin to the top */
+    }
+
+    #price-title{
+        margin-left: 4.7em;
+    }
+    
+    #quantity-title{
+        margin-left: -1.5rem;
+    }
+
+    #total-title{
+        margin-left: -2rem;
+    }
+
+    .item-name{
+        margin-top: 2rem;
+    }
+
+    .item-price{
+        margin-top: 2.1rem;
+    }
+
+    .item-quantity{
+        margin-top: 1.2rem;
+    }
+
+    .item-total{
+        margin-top: 2rem;
+    }
+
+    .remove-btn{
+        margin-top: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .checkout-content {
+        grid-template-columns: 1fr; /* Change to single column layout */
+    }
+    
+    .box {
+        margin: 5px 0px 20px 0px; /* Adjust margin for smaller screens */
+    }
+
+    #items, 
+    #discount-code,
+    #order-summary {
+        margin: 1rem 2rem 1rem 2rem;
+    }
+    
+    .item-row {
+        flex-direction: row; /* Arrange items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .item-name {
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px; /* Add margin to the top */
+        width: auto; /* Auto width */
+    }
+
+    .item-name {
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px; /* Add margin to the top */
+        width: auto; /* Auto width */
+        max-width: 60px; /* Limit maximum width */
+        white-space: nowrap; /* Prevent wrapping */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Display ellipsis for overflow */
+    }
+    
+    .item-price,
+    .item-total {
+        width: auto; /* Auto width */
+        text-align: left; /* Align text to the left */
+    }
+    
+    .item-quantity {
+        margin-top: 10px; /* Add margin to the top */
+    }
+
+    #price-title{
+        display: none
+    }
+    
+    #quantity-title{
+        display: none
+    }
+
+    #total-title{
+        margin-left: 10rem;
+    }
+
+    .item-name{
+        margin-top: 2rem;
+    }
+
+    .item-price{
+        margin-top: 2.1rem;
+    }
+
+    .item-quantity{
+        margin-top: 1.2rem;
+    }
+
+    .item-total{
+        margin-top: 2rem;
+    }
+
+    .remove-btn{
+        margin-top: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .item-price{
+        display:none;
+    }
+
+    .item-photo{
+        width: 60px;
+        height: 60px;
+    }
+
+    .photo-details{
+        width: 50px;
+        height: 50px;
+    }
+
+    #total-title{
+        margin-left: 1.5rem;
+        font-size: 16px;
+    }
+
+    .item-name{
+        margin-top: 1.5rem;
+        font-size: 14px;
+        max-width: 40px;
+    }
+
+    .item-quantity{
+        margin-top: 1.3rem;
+    }
+
+    .item-total{
+        margin-top: 1.4rem;
+        font-size: 1rem;
+    }
+
+    .remove-btn{
+        margin-top: 1.3rem;
+    }
+
+    .remove{
+        width: 16px;
+        height: 16px;
+    }
+    
+    .quantity-btn {
+        font-size: 16px; /* Adjust font size of quantity buttons */
+        font-weight: 700;
+        padding: 0;
+    }
+    
+    .quantity-circle {
+        font-size: 12px; /* Adjust font size of quantity display */
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .item-photo {
+        
+    }
+
+    .item-row-title{
+        margin-bottom: 1rem;
+    }
+
+    .photo-details {
+        width: 50px;
+        height: 50px;
+    }
+
+    #total-title {
+        display: none;
+    }
+
+    .item-name {
+        margin-top: 1.5rem;
+        font-size: 14px;
+        max-width: 70px; /* Limit width to 40px */
+    }
+
+    .item-quantity{
+        display: none
+    }
+
+    .item-total {
+        display: none
+    }
+
+    .remove-btn {
+        margin-top: 1.3rem;
+    }
+
+    .remove {
+        width: 16px;
+        height: 16px;
+    }
+
+    .quantity-btn {
+        font-size: 16px; /* Adjust font size of quantity buttons */
+        font-weight: 700;
+        padding: 0;
+    }
+
+    .quantity-circle {
+        font-size: 12px; /* Adjust font size of quantity display */
+        width: 15px;
+        height: 15px;
+    }
+
+    #order-summary * {
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+
+    /* Adjust the size and layout of the discount code card */
+    #discount-code {
+        padding: 10px; /* Adjust padding as needed */
+        font-size: 14px; /* Adjust font size as needed */
+        display: flex; /* Change display to flex */
+        flex-direction: column; /* Arrange contents in columns */
+        justify-content: center; /* Center items horizontally */
+        align-items: flex-start; /* Align items to the start of the column */
+    }
+
+    /* Adjust the style of the discount input and apply button */
+    .discount-code-entry {
+        display: flex;
+        flex-direction: column; /* Arrange contents in columns */
+    }
+
+    .discount-code-entry input {
+        width: calc(100% - 20px); /* Make the input fill the available width */
+        padding: 10px; /* Adjust padding as needed */
+        margin-bottom: 10px; /* Add spacing between input and button */
+        border-radius: 10px; /* Add border-radius */
+        border: 1px solid #ccc; /* Add border */
+        align-items: center;
+    }
+
+    .discount-code-entry button {
+        width: calc(100% - 20px); /* Make the button fill the available width */
+        padding: 10px; /* Adjust padding as needed */
+        border-radius: 10px; /* Add border-radius */
+        border: none; /* Remove border */
+        background-color: #24CAAB; /* Button background color */
+        color: white; /* Button text color */
+        cursor: pointer; /* Add cursor pointer */
+        transition: background-color 0.3s ease; /* Add transition */
+    }
+
+    .discount-code-entry button:hover {
+        background-color: #1A8996; /* Change background color on hover */
+    }
+
+    .discount-code-entry button:active {
+        background-color: #0F4C52; /* Change background color on click */
+    }
+}
