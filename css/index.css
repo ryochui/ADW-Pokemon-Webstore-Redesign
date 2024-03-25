@@ -44,7 +44,7 @@
     height: 60px;
     width: 60px;
     background-color: #1A8996;
-    z-index: 6;
+    z-index: 101;
     border-radius: 50%;
     border: 2px solid #246873;
 }
@@ -84,6 +84,10 @@
     transform: translateY(-8px)rotate(-45deg);
 }
 
+a {
+    cursor: pointer;
+}
+
 /*Navigation Bar*/
 #nav-bar {
     display: flex;
@@ -98,7 +102,7 @@ nav {
     left: -100%;
     flex-direction: column;
     justify-content: space-evenly;
-    z-index: 3;
+    z-index: 100;
     height: 100svh;
     gap: 2rem;
     list-style: none;
@@ -136,7 +140,7 @@ nav a:hover {
     position: absolute;
     top: 2rem;
     right: 20px;
-    z-index: 2;
+    z-index: 100;
     padding: 15px 30px;
     border: 2px solid #24CAAB;
     letter-spacing: 4px;
@@ -186,6 +190,7 @@ main {
 /*sections*/
 
 main > section {
+    position: relative;
     display: grid;
     height: 100svh;
     width: 100svw;
@@ -299,8 +304,9 @@ main > section {
 }
 
 #actual-news div {
-    width: 100%;
     display: none;
+    width: 100%;
+    opacity: 0;
     color: #FDFEFD;
 }
 
@@ -326,7 +332,7 @@ main > section {
 
 #actual-news .active {
     display: block;
-    transition: 300ms;
+    opacity: 100;
 }
 
 .slide-circle {
@@ -431,12 +437,12 @@ main > section {
 }
 
 .npc-thumbnail {
+    position: relative;
     background: url(../assets/images/npcs_bg.png), #282d37;
     background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: flex;
     width: 75px;
     height: 75px;
     overflow: hidden;
@@ -451,7 +457,6 @@ main > section {
     right: 20px;
     object-fit: cover;
 }
-
 /*pokemon*/
 
 #pokemon {
@@ -500,7 +505,7 @@ main > section {
     position: absolute;
     left: 2rem;
     top: 15svh;
-    width: 50svw;
+    width: 60svw;
     max-width: 80%;
     z-index: 1;
 }
@@ -553,22 +558,20 @@ main > section {
 }
 
 #pokemon-mini-wrapper .pokemon-card {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    display: grid;
+    position: relative;
+    justify-items: center;
+    align-items: center;
     width: 100%;
     filter: brightness(.5);
     transition: .5s;
 }
 
 #pokemon-mini-wrapper .pokemon-card img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-#pokemon-mini-wrapper .pokemon-card:hover {
-    filter: brightness(0.75);
 }
 
 #pokemon-mini-wrapper .pokemon-card.active {
@@ -576,18 +579,83 @@ main > section {
     filter: brightness(1);
 }
 
+#pokemon-mini-wrapper .pokemon-card.active p {
+    font-size: 3em;
+    transition: all 0.5s ease-out;
+}
+
 #pokemon-mini-wrapper .pokemon-card p {
+    writing-mode: vertical-rl;
     font-family: Roboto Condensed, sans-serif;
     position: absolute;
-    top: 50%;
     font-size: 2.5em;
-    transform: rotate(-90deg);
     font-weight: 700;
     color: white;
+    width: 100%;
 }
 
 #items {
-    background-color: orange;
+    background-image: url('../assets/images/items_bg.svg');
+    background-size: cover;
+}
+
+.item-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    z-index: 0;
+    transition: all 0.5s ease;
+    pointer-events: auto;
+}
+
+.item-container:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+.item-content {
+    opacity: 0;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.item-container::after {
+    opacity: var(--displayContainer, 1);
+    position: absolute;
+    content:'';
+    width: 30%;
+    height: 60%;
+    z-index: -1;
+    border: solid 7px red;  
+}
+
+.item-container.active {
+    top: inherit;
+    left: inherit;
+    z-index: 2;
+    position: absolute;
+    left: 50px;
+    /* transform: translateX(50%); */
+    width: 60svw;
+    height: 60svh;
+    align-items: center;
+    justify-items: center;
+    background-color: #A5D1BC;
+    transition: all 0.5s ease;
+}
+
+.item-content.active {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 0.5fr 1fr;
+    opacity: 1;
+    padding: 50px;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.item-content.active h1 {
+    font-size: 5em;
 }
 
 /*GAMEPLAY*/
@@ -629,14 +697,193 @@ main > section {
     background-position: left;
 }
 
-.swiper-button-prev::after, .swiper-button-next::after {    
+.swiper-button-prev::after, .swiper-button-next::after {  
     color: #fff;
 }
 
+/*SEASON*/
+
 #season {
+    display: grid;
     background-color: gray;
 }
 
+#season-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2;
+    background-image: url('../assets/images/seasons-articlebg.jpg');
+    background-attachment: local;
+    background-position: center top;
+    background-size: cover;
+}
+
+#season-wrapper article {
+    height: 100%;
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+#season-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 41%;
+    z-index: -0;
+    border-radius: 100px 100px 0px 0px;
+    background: inherit;
+    background-position: 0px calc(100svh * -0.4);
+}
+
+#season-wrapper article > div > h1 {
+    font-size: 3em;
+    font-family: Lato, sans-serif;
+    font-weight: 800;
+    color:#0E234A;
+}
+
+#season-wrapper article > div > p {
+    font-family: Lato, sans-serif;
+    font-size: 1.2em;
+    color: #1e1e1e;
+}
+
+#season-home img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+#season-home-content {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    gap: 4svh;
+}
+
+#season-locs {
+    display: grid;
+    padding-bottom: 50px;
+    grid-template-rows: 30% 70%;
+    justify-items: center;
+    align-items: center;
+}
+
+#season-locs-wrapper {
+    display: flex;
+    gap: 40px;
+    width: 80svw;
+    height: 70svh;
+}
+
+#season-locs-content {
+    width: 50%;
+    text-align: center;
+}
+
+.locs-card {
+    display: grid;
+    position: relative;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 50px rgba(0,0,0,.25);
+    background-color: #f5efda;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.locs-card > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    background-image: url('../assets/icons/pokeball-violet.svg');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding: 20px;
+    color: #2b408c;
+    font-family: Lato, sans-serif;
+}
+
+.card-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.card-content h5 {
+    font-weight: 600;
+}
+
+.card-content p {
+    margin-top: 10px;
+}
+
+.season-pokeball {
+    position: absolute;
+    right: 0;
+}
+
+#season-global {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#global-content {
+    position: relative;
+    width: 50%;
+    text-align:center;
+}
+
+#global-content h1 {
+    font-size: 3em;
+    font-family: Lato, sans-serif;
+    font-weight: 800;
+    color:#0E234A;
+    margin-bottom: 5px;
+}
+
+#global-content p {
+    font-family: Lato, sans-serif;
+    font-size: 1.2em;
+    color: #1e1e1e;
+}
+
+#season-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    right: 20px;
+    z-index: 5;
+}
+
+.season-icons {
+    background-color: rgba(26, 137, 150, 0.7);
+    border: 3px solid #b7eaf0;
+    border-radius: 50px;
+    transition: 0.3s;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.season-icons:hover {
+    background-color: rgba(26, 137, 150, 1);
+}
 
 /*credits*/
 

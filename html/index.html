@@ -18,9 +18,9 @@
     </div>
     <div id="nav-bar">
         <nav class="active">
-            <li><a>HOME</a></li>
-            <li><a onclick="smoothScroll(document.getElementById('news'))">NEWS</a></li>
-            <li><a onclick="smoothScroll(document.getElementById('npcs'))">NPCs</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#npcs">NPCs</a></li>
             <li><a href="#pokemon">POKEMON</a></li>
             <li><a href="#items">ITEMS</a></li>
             <li><a href="#gameplay">GAMEPLAY</a></li>
@@ -94,17 +94,17 @@
                             </div>
                         </div>
                         <div id="news-nav">
-                            <a href="#slide-1" onclick="openNews(0)">
+                            <a onclick="openNews(0); moveToSection('slide-1');">
                                 <svg class="slide-circle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 2 2">
                                 <circle r="1" cx="0" cy="0" fill="white" />
                                 </svg>
                             </a>
-                            <a href="#slide-2" onclick="openNews(1)">
+                            <a onclick="openNews(1); moveToSection('slide-2');">
                                 <svg class="slide-circle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 2 2">
                                 <circle r="1" cx="0" cy="0" fill="white" />
                                 </svg>
                             </a>
-                            <a href="#slide-3" onclick="openNews(2)">
+                            <a onclick="openNews(2); moveToSection('slide-3');">
                                 <svg class="slide-circle" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 2 2">
                                 <circle r="1" cx="0" cy="0" fill="white" />
                                 </svg>
@@ -243,31 +243,31 @@
                 </div>
             </div>
             <div id="npcs-nav">
-                <a href="#willow"><div class="npc-thumbnail">
+                <a onclick="moveToSection('willow')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_professorwillow.webp">
                 </div></a>
-                <a href="#arlo"><div class="npc-thumbnail">
+                <a onclick="moveToSection('arlo')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_arlo.webp">
                 </div></a>
-                <a href="#cliff"><div class="npc-thumbnail">
+                <a onclick="moveToSection('cliff')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_cliff.webp">
                 </div></a>
-                <a href="#sierra"><div class="npc-thumbnail">
+                <a onclick="moveToSection('sierra')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_sierra.webp">
                 </div></a>
-                <a href="#giovanni"><div class="npc-thumbnail">
+                <a onclick="moveToSection('giovanni')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_giovanni.png">
                 </div></a>
-                <a href="#rhi"><div class="npc-thumbnail">
+                <a onclick="moveToSection('rhi')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_rhi.webp">
                 </div></a>
-                <a href="#blanche"><div class="npc-thumbnail">
+                <a onclick="moveToSection('blanche')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_blanche.webp">
                 </div></a>
-                <a href="#candela"><div class="npc-thumbnail">
+                <a onclick="moveToSection('candela')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_candela.webp">
                 </div></a>
-                <a href="#spark"><div class="npc-thumbnail">
+                <a onclick="moveToSection('spark')"><div class="npc-thumbnail">
                     <img src="../assets/NPC/npc_spark.webp">
                 </div></a>
             </div>
@@ -343,10 +343,19 @@
                     </div>
                 </div>
             </div>
-            
         </section>
         <section id="items">
-            <h1>ITEMS</h1>
+            <div class="item-container">
+                <div class="item-img">
+                    <img src="../assets/items/Poke Balls/Poké Balls_Poké_Ball.webp" alt="">
+                </div>
+                <div class="item-content">
+                    <h1>Poke Ball</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, 
+                        morbi torquent potenti proin hac sociis pretium, 
+                        fringilla nisi varius cubilia egestas facilisi.</p>
+                </div>
+            </div>
         </section>
         <section id="gameplay">
             <!-- Slider main container -->
@@ -379,7 +388,103 @@
                 </div>
         </section>
         <section id="season">
-            <h1>SEASON</h1>
+            <div id="season-nav">
+                <a class="season-icons" onclick="moveToSection('season-home')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier"> <path d="M9 17.25C8.58579 17.25 8.25 17.5858 8.25 18C8.25 18.4142 8.58579 18.75 9 18.75H15C15.4142 18.75 15.75 18.4142 15.75 18C15.75 17.5858 15.4142 17.25 15 17.25H9Z" fill="#b4e7ed"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C11.2919 1.25 10.6485 1.45282 9.95055 1.79224C9.27585 2.12035 8.49642 2.60409 7.52286 3.20832L5.45628 4.4909C4.53509 5.06261 3.79744 5.5204 3.2289 5.95581C2.64015 6.40669 2.18795 6.86589 1.86131 7.46263C1.53535 8.05812 1.38857 8.69174 1.31819 9.4407C1.24999 10.1665 1.24999 11.0541 1.25 12.1672V13.7799C1.24999 15.6837 1.24998 17.1866 1.4027 18.3616C1.55937 19.567 1.88856 20.5401 2.63236 21.3094C3.37958 22.0824 4.33046 22.4277 5.50761 22.5914C6.64849 22.75 8.10556 22.75 9.94185 22.75H14.0581C15.8944 22.75 17.3515 22.75 18.4924 22.5914C19.6695 22.4277 20.6204 22.0824 21.3676 21.3094C22.1114 20.5401 22.4406 19.567 22.5973 18.3616C22.75 17.1866 22.75 15.6838 22.75 13.7799V12.1672C22.75 11.0541 22.75 10.1665 22.6818 9.4407C22.6114 8.69174 22.4646 8.05812 22.1387 7.46263C21.8121 6.86589 21.3599 6.40669 20.7711 5.95581C20.2026 5.5204 19.4649 5.06262 18.5437 4.49091L16.4771 3.20831C15.5036 2.60409 14.7241 2.12034 14.0494 1.79224C13.3515 1.45282 12.7081 1.25 12 1.25ZM8.27953 4.50412C9.29529 3.87371 10.0095 3.43153 10.6065 3.1412C11.1882 2.85833 11.6002 2.75 12 2.75C12.3998 2.75 12.8118 2.85833 13.3935 3.14119C13.9905 3.43153 14.7047 3.87371 15.7205 4.50412L17.7205 5.74537C18.6813 6.34169 19.3559 6.76135 19.8591 7.1467C20.3487 7.52164 20.6303 7.83106 20.8229 8.18285C21.0162 8.53589 21.129 8.94865 21.1884 9.58104C21.2492 10.2286 21.25 11.0458 21.25 12.2039V13.725C21.25 15.6959 21.2485 17.1012 21.1098 18.1683C20.9736 19.2163 20.717 19.8244 20.2892 20.2669C19.8649 20.7058 19.2871 20.9664 18.2858 21.1057C17.2602 21.2483 15.9075 21.25 14 21.25H10C8.09247 21.25 6.73983 21.2483 5.71422 21.1057C4.71286 20.9664 4.13514 20.7058 3.71079 20.2669C3.28301 19.8244 3.02642 19.2163 2.89019 18.1683C2.75149 17.1012 2.75 15.6959 2.75 13.725V12.2039C2.75 11.0458 2.75076 10.2286 2.81161 9.58104C2.87103 8.94865 2.98385 8.53589 3.17709 8.18285C3.36965 7.83106 3.65133 7.52164 4.14092 7.1467C4.6441 6.76135 5.31869 6.34169 6.27953 5.74537L8.27953 4.50412Z" fill="#b4e7ed"/> </g>
+                    </svg>
+                </a>
+                <a class="season-icons" onclick="moveToSection('season-locs')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier"> <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#b4e7ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#b4e7ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                    </svg>
+                </a>
+                <a class="season-icons" onclick="moveToSection('season-global')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier"> <path d="M3 12H21M3 12C3 16.9706 7.02944 21 12 21M3 12C3 7.02944 7.02944 3 12 3M21 12C21 16.9706 16.9706 21 12 21M21 12C21 7.02944 16.9706 3 12 3M12 21C4.75561 13.08 8.98151 5.7 12 3M12 21C19.2444 13.08 15.0185 5.7 12 3" stroke="#b4e7ed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                    </svg>
+                </a>
+            </div>
+            <div id="season-wrapper">
+                <article id="season-home" class="season-page">
+                    <img src="../assets/images/season_home.webp" />
+                    <div id="season-home-content">
+                        <h1>Pokémon GO Fest 2024 has global adventures in 
+                            store for your summer days and nights!</h1>
+                        <p>The biggest Pokémon GO event of the year is back, 
+                        and Trainers can look forward to even more ways 
+                        to play in each city and globally! Join millions 
+                        of Pokémon GO fans from around the world and get 
+                        ready for exciting adventures, exclusive gameplay 
+                        opportunities, and more.</p>
+                    </div>
+                </article>
+                <article id="season-locs" class="season-page">
+                    <div id="season-locs-content">
+                        <h1>Pokémon GO Fest 2024 Venues</h1>
+                        <p>The best way to experience Pokémon GO Fest is 
+                            in-person, and we're excited to announce the
+                            three cities hosting GO Fest 2024 events!</p>
+                    </div>
+                    <div id="season-locs-wrapper">
+                        <div class="locs-card">
+                            <img src="../assets/images/locs-card_sendai.jpg" alt="">
+                            <section class="card-content">
+                                <h5>May 30 to June 2</h5>
+                                <h1>Sendai, Japan</h1>
+                                <hr />
+                                <p>Our host city in Asia for Pokémon GO Fest 2024 is Sendai,
+                                    Japan! This will mark “The Greenest City” in Japan's first time
+                                    hosting a GO Fest event.</p>
+                            </section>
+                        </div>
+                        <div class="locs-card">
+                            <img src="../assets/images/locs-card_madrid.jpg" alt="">
+                            <section class="card-content">
+                                <h5>June 14 to June 16</h5>
+                                <h1>Madrid, Spain</h1>
+                                <hr />
+                                <p>Trainers, get ready to head to Madrid, Spain for the European edition
+                                    of Pokémon GO Fest 2024! You'll be able to enjoy exploring the vibrant
+                                    and rich culture of southern Europe's biggest city.</p>
+                            </section>
+                        </div>
+                        <div class="locs-card">
+                            <img src="../assets/images/locs-card_newyork.jpg" alt="">
+                            <section class="card-content">
+                                <h5>July 5 to 7</h5>
+                                <h1>New York City, USA</h1>
+                                <hr />
+                                <p>The penultimate Pokémon GO Fest 2024 weekend will take place in none other
+                                    than New York City where you'll be able to experience all the 
+                                    Big Apple has to offer!</p>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+                <article id="season-global" class="season-global">
+                    <section id="global-content">
+                        <h1>Pokémon GO Fest 2024: Global</h1>
+                        <p>A concluding two-day online event will also be available to Trainers around the world!
+                            Join millions of other Trainers and play from anywhere during this special GO Fest 2024 event.
+                            <br><br>
+                            Global event tickets are also available now! They'll be available to purchase up until
+                            the last day of the event. Unlike the in-person experiences, Trainers won't need to worry
+                            about the global event selling out!
+                            <br><br>
+                            Trainers who purchase their ticket from the Pokémon GO Web Store will receive an exclusive
+                            GO Fest 2024 T-shirt avatar item in an exclusive color. Like the GO Fest event badge, the T-shirt
+                            will arrive closer to the date of the Pokémon GO Fest event.
+                            <br><br>
+                            More information about all four events will be shared at a later date, so stay tuned!</p>
+                    </section>
+            </div>
         </section>
         <section id="credits">
             <p>©2024 Niantic, Inc. ©2024 Pokémon. ©1995-2024 Nintendo / Creatures Inc. / GAME FREAK inc. Pokémon and Pokémon character names are trademarks of Nintendo. Apple and 

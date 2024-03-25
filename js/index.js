@@ -8,6 +8,8 @@ let newsArr = Array.from(news);
 let pokemonBG = document.querySelectorAll(".pokemon-bg");
 let pokemonMINI = document.querySelectorAll(".pokemon-card");
 let itemActive = 0;
+//items
+let items = document.querySelectorAll(".item-container")
 
 hamburger.addEventListener("click", function toggleSideBar() {
     nav.classList.toggle("active");
@@ -23,6 +25,10 @@ sections.forEach(section => {
     });
 });
 
+function moveToSection(location) {
+    document.getElementById(location).scrollIntoView({behavior: 'smooth'});
+};
+
 function openNews(page) {
     newsArr.forEach((item) => {
         item.classList.remove("active");
@@ -30,28 +36,21 @@ function openNews(page) {
     newsArr[page].classList.toggle("active");
 };
 
-window.smoothScroll = function(target) {
-    var scrollContainer = target;
-    do { //find scroll container
-        scrollContainer = scrollContainer.parentNode;
-        if (!scrollContainer) return;
-        scrollContainer.scrollTop += 1;
-    } while (scrollContainer.scrollTop == 0);
+items.forEach(item => {
+    var isDisplayed = true;
+    item.addEventListener("click", function () {
 
-    var targetY = 0;
-    do { //find the top of target relatively to the container
-        if (target == scrollContainer) break;
-        targetY += target.offsetTop;
-    } while (target = target.offsetParent);
-
-    scroll = function(c, a, b, i) {
-        i++; if (i > 30) return;
-        c.scrollTop = a + (b - a) / 30 * i;
-        setTimeout(function(){ scroll(c, a, b, i); }, 20);
-    }
-    // start scrolling
-    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
+        if (isDisplayed) {
+            item.style.setProperty('--displayContainer', '0');
+            isDisplayed = false;
+        } else {
+            item.style.setProperty('--displayContainer', '1');
+            isDisplayed = true;
+        }
+        item.classList.toggle("active");
+        item.querySelector(".item-content").classList.toggle("active");
+    });
+});
 
 //POKEMON FUNCTIONS
 function showSlider(){
