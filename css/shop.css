@@ -40,8 +40,8 @@ a{
 
 .banner-content {
     padding: 20px;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -49,8 +49,8 @@ a{
     box-shadow: 2px 2px 3px #8b8b8b;
     border-radius: 20px;
     width: 90vw;
-    height: 300px; /* Set a fixed height */
-    object-fit: cover; /* Crop the image to fit the container */
+    height: 300px;
+    object-fit: cover;
 }
 
 /* New styles for the title and description */
@@ -70,7 +70,7 @@ a{
 
 .image-gallery {
     display: flex;
-    flex-wrap: wrap; /* Allow images to wrap into multiple rows */
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 20px;
 }
@@ -89,7 +89,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(20% - 1rem); /* Adjust the width of each card */
+    width: calc(20% - 1rem); 
     box-sizing: border-box;
     text-align: center;
     margin: 0.5rem;
@@ -187,7 +187,7 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch; /* Adjust the alignment of items */
+    align-items: stretch; 
     margin: auto;
     max-width: 1200px;
 }
@@ -206,7 +206,7 @@ a{
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #24CAAB; /* Change as needed */
+    background-color: #24CAAB; 
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -214,14 +214,14 @@ a{
 }
 
 .btn:hover {
-    background-color: #1a8a97; /* Change as needed */
+    background-color: #1a8a97; 
 }
 
 #r3, #r4 {
-    margin: 0rem auto; /* Center the entire row horizontally */
+    margin: 0rem auto; 
     padding: 20px;
     text-align: center;
-    max-width: 1200px; /* Limit the maximum width */
+    max-width: 1200px; 
 }
 
 #r3 .card-content {
@@ -230,7 +230,7 @@ a{
     background-position: center;
     background-size:cover;
     border-radius: 15px;
-    padding: 2rem 1rem 1rem 1rem; /* Add padding to the card content */
+    padding: 2rem 1rem 1rem 1rem; 
     width: 100%;
 }
 
@@ -240,46 +240,46 @@ a{
     background-position: center;
     background-size:cover;
     border-radius: 15px;
-    padding: 2rem 1rem 1rem 1rem; /* Add padding to the card content */
+    padding: 2rem 1rem 1rem 1rem;
     width: 100%;
 }
 
 #r3 h2 {
     color: #fff;
     text-shadow: 0px 0px 16px #0b484e;
-    font-size: 2rem; /* Adjust font size as needed */
-    margin-bottom: 1rem; /* Adjust margin as needed */
+    font-size: 2rem;
+    margin-bottom: 1rem; 
 }
 
 #r4 h2 {
     color: #0b484e;
     text-shadow: 0px 0px 16px #fff;
-    font-size: 2rem; /* Adjust font size as needed */
-    margin-bottom: 1rem; /* Adjust margin as needed */
+    font-size: 2rem; 
+    margin-bottom: 1rem; 
 }
 
 .row-3 {
     display: flex;
-    flex-direction: column; /* Arrange elements vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
 }
 
 .column {
     text-align: center;
-    margin: 0.5rem 0; /* Adjust vertical spacing */
+    margin: 0.5rem 0; 
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 24px; /* Increased padding for better visibility */
+    padding: 12px 24px; 
     background-color: #fff;
     color: #0b484e;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
     margin: 0.5rem 0;
-    border: none; /* Remove default border */
+    border: none; 
     font-size: 16px;
     font-weight: 700;
     width: 16rem;
@@ -288,7 +288,7 @@ a{
 
 .btn:hover {
     background-color: #0b484e;
-    transform: scale(1.2); /* Grow bigger on hover */
+    transform: scale(1.2); 
     color: white
 }
 
@@ -299,13 +299,13 @@ a{
 /* For screens smaller than 1200px */
 @media screen and (max-width: 1200px) {
     .cat-card {
-        width: calc(25% - 1rem); /* Adjust width for 4 cards per row */
+        width: calc(25% - 1rem); 
     }
 }
 
 @media screen and (max-width: 992px) {
     .cat-card {
-        width: calc(33.33% - 1rem); /* Adjust width for 3 cards per row */
+        width: calc(33.33% - 1rem); 
     }
 
     .banner-content .title {
@@ -324,7 +324,7 @@ a{
     }
 
     .cat-card {
-        width: calc(50% - 1rem); /* Adjust width for 2 cards per row */
+        width: calc(50% - 1rem);
     }
 
     .banner-content .title {
@@ -337,7 +337,7 @@ a{
 
 @media screen and (max-width: 730px) {
     .cat-card {
-        width: calc(50% - 1rem); /* Adjust width for 2 cards per row */
+        width: calc(50% - 1rem); 
     }
 
     .banner-content img {
@@ -358,7 +358,7 @@ a{
 
 @media screen and (max-width: 480px) {
     .cat-card {
-        width: calc(100% - 1rem); /* Adjust width for 1 card per row */
+        width: calc(100% - 1rem); 
     }
 
     .row-2 {
