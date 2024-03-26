@@ -87,7 +87,7 @@ function validateForm() {
 
     // Validate phone number if provided
     if (phoneNumber !== '' && !phoneNumberRegex.test(phoneNumber)) {
-        setError(document.getElementById("phoneNumber"), "Please enter a valid phone number starting with '09' or '+63' followed by 9 more digits.");
+        setError(document.getElementById("phoneNumber"), "Please enter a valid phone number.");
         isValid = false;
     } else {
         setSuccess(document.getElementById("phoneNumber"));

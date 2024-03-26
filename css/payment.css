@@ -147,6 +147,38 @@ body {
     margin-top:30px
 }
 
+.detail-row input:focus{
+    outline: 0;
+}
+
+.detail-row.success input.detail-value{
+    border-color: #09c372;
+}
+
+.input-container.success input.detail-value{
+    border-color: #09c372;
+}
+
+.detail-row.error input.detail-value{
+    border-color: #ff3860;
+}
+
+.input-container.error input.detail-value{
+    border-color: #ff3860;
+}
+
+.detail-row .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.input-container .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
 .detail-label, .detail-value {
     margin-bottom: 5px;
 }
