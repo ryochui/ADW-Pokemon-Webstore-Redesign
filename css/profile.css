@@ -276,12 +276,80 @@ hr {
     flex-direction: column;
     justify-content:space-between;
     background-color: #24CAAB;
+    background-color: #f0f0f0;
+    backdrop-filter: blur(100px);
+}
+
+/** Backgrounds **/
+
+#pokemon-one{
     background-image: url('../assets/profilePokemons/mewtwo2.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size:cover;
-    background-color: #f0f0f0;
-    backdrop-filter: blur(100px);
+}
+
+#pokemon-two{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-three{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-four{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-five{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-six{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-seven{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-eight{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-nine{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+}
+
+#pokemon-ten{
+    background-image: url('../assets/images/fullbg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
 }
 
 .pokemon-card h3,
