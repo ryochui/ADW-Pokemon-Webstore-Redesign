@@ -118,7 +118,7 @@ hr {
     margin: 0.5rem;
     border-radius: 25px;
     box-shadow: 1px 1px 2px #afafaf;
-    background-image: url('/assets/images/fullbg.jpg');
+    background-image: url('../assets/images/fullbg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -132,7 +132,7 @@ hr {
 .card:hover {
     transform: scale(1.2); 
     z-index: 1; 
-    background-image: url('/assets/images/fullbg3.jpg'); 
+    background-image: url('../assets/images/fullbg3.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
 }

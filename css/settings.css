@@ -49,7 +49,7 @@ a{
 }
 
 .upper-user-info{
-    background-image: url('/assets/images/wallpaper.jpg');
+    background-image: url('../assets/images/wallpaper.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size:cover;
@@ -253,7 +253,7 @@ hr {
 
 .column2 {
     background: #e7e7e7;
-    background-image: url('/assets/images/cartbg.png');
+    background-image: url('../assets/images/cartbg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -312,7 +312,6 @@ hr {
 
 .column1 .row:nth-child(4),
 .column1 .row:nth-child(5) {
-    flex-direction: row;
     margin-bottom: 0;
 }
 
@@ -397,6 +396,12 @@ input[type="password"]:focus {
 }
 
 @media screen and (max-width: 1053px) {
+
+    .row-change{
+        display: flex;
+        flex-direction: column;
+    }
+
     .mewrow{
         flex-direction: column;
         row-gap: 10px;
@@ -467,6 +472,15 @@ input[type="password"]:focus {
 }
 
 @media screen and (max-width: 768px) {
+
+    .row-change{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main{
+        margin-top: -3rem;
+    }
     .user-pic,
     .user-info,
     .social {
@@ -549,6 +563,11 @@ input[type="password"]:focus {
 
 /*Phones */
 @media screen and (max-width: 512px) {
+
+    .row-change{
+        display: flex;
+        flex-direction: column;
+    }
 
     .user-pic {
         width: 100%;
@@ -660,6 +679,15 @@ input[type="password"]:focus {
 }
 
 @media screen and (max-width: 450px) {
+
+    .row-change{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .change-title{
+        font-size: 1rem;
+    }
 
     .user-pic {
         width: 50%;

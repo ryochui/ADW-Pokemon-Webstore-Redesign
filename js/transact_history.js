@@ -210,10 +210,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function getCardLogoPath(cardType) {
         // Define an object with card types as keys and corresponding logo paths as values
         const logoPaths = {
-            "Visa": "/assets/cards/visa.png",
-            "MasterCard": "/assets/cards/mastercard.jpg",
-            "UnionBank": "/assets/cards/unionbank.png",
-            "BPI":"/assets/cards/bpi.png"
+            "Visa": "../assets/cards/visa.png",
+            "MasterCard": "../assets/cards/mastercard.jpg",
+            "UnionBank": "../assets/cards/unionbank.png",
+            "BPI":"../assets/cards/bpi.png"
         };
         
         console.log("Selected card type:", cardType); // Log selected card type

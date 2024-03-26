@@ -46,11 +46,11 @@ main {
 }
 
 @keyframes changeBackground {
-    0% { background-image: url('/assets/images/fullbg.jpg'); }
-    25% { background-image: url('/assets/images/fullbg2.jpg'); }
-    50% { background-image: url('/assets/images/fullbg3.jpg'); }
-    75% { background-image: url('/assets/images/fullnightbg.jpg'); }
-    100% { background-image: url('/assets/images/fullbg.jpg'); }
+    0% { background-image: url('../assets/images/fullbg.jpg'); }
+    25% { background-image: url('../assets/images/fullbg2.jpg'); }
+    50% { background-image: url('../assets/images/fullbg3.jpg'); }
+    75% { background-image: url('../assets/images/fullnightbg.jpg'); }
+    100% { background-image: url('../assets/images/fullbg.jpg'); }
 }
 
 .listing-picture:hover{

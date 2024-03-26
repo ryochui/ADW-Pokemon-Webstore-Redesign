@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web App Store</title>
-    <link rel="stylesheet" href="/css/settings.css">
-    <link rel="stylesheet" href="/css/webstore_nav.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png">
+    <title>Settings - Pokémon GO Store</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/webstore_nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +27,7 @@
             <div id="store-options">
                 <a href="shopping.html"><li>OFFERS</li></a>
                     <li>
-                        <a href="../html/register.html">
+                        <a href="../html/login.html">
                             <div id="prof-icon" class="store-icon">
                                 <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b7eaf0" stroke="#ffffff">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
@@ -53,7 +54,7 @@
         <div class="prof-card">
             <div class="row upper-user-info">
                 <div class="column user-pic">
-                    <img src="/assets/images/profile.jpg" alt="User Picture" id="profile-picture">
+                    <img src="../assets/images/profile.jpg" alt="User Picture" id="profile-picture">
                 </div>
                 <div class="column user-info">
                     <div class="row">
@@ -68,9 +69,9 @@
                 </div>
                 <div class="column social">
                     <div class="row social-media">
-                        <img src="/assets/buttons/facebook.png" alt="Facebook" class="social-icon">
-                        <img src="/assets/buttons/discord.png" alt="Discord" class="social-icon">
-                        <img src="/assets/buttons/twitch.png" alt="Twitch"  class="social-icon">
+                        <img src="../assets/buttons/facebook.png" alt="Facebook" class="social-icon">
+                        <img src="../assets/buttons/discord.png" alt="Discord" class="social-icon">
+                        <img src="../assets/buttons/twitch.png" alt="Twitch"  class="social-icon">
                     </div>
                 </div>
             </div>
@@ -114,7 +115,7 @@
                 <div class="row">
                     <div class="card change">
                         <div class="row">
-                            <h2>Change Username</h2>
+                            <h2 class="change-title">Change Username</h2>
                         </div>
                         <div class="row">
                             <div class="column">
@@ -124,10 +125,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row-change row">
                     <div class="card change">
                         <div class="row">
-                            <h2>Change Email Address</h2>
+                            <h2 class="change-title">Change Email Address</h2>
                         </div>
                         <div class="row">
                             <div class="column">
@@ -139,7 +140,7 @@
                     </div>
                     <div class="card change">
                         <div class="row">
-                            <h2>Change Password</h2>
+                            <h2 class="change-title">Change Password</h2>
                         </div>
                         <div class="row">
                             <div class="column">
@@ -157,27 +158,27 @@
                         <h2>Medals</h2>
                     </div>
                     <div class="row">
-                        <img src="/assets/medals/gold1.webp" alt="Medal 1">
-                        <img src="/assets/medals/gold2.webp" alt="Medal 2">
-                        <img src="/assets/medals/gold3.webp" alt="Medal 3">
-                        <img src="/assets/medals/gold4.webp" alt="Medal 4">
+                        <img src="../assets/medals/gold1.webp" alt="Medal 1">
+                        <img src="../assets/medals/gold2.webp" alt="Medal 2">
+                        <img src="../assets/medals/gold3.webp" alt="Medal 3">
+                        <img src="../assets/medals/gold4.webp" alt="Medal 4">
                     </div>
                     <div class="row">
-                        <img src="/assets/medals/gold5.webp" alt="Medal 5">
-                        <img src="/assets/medals/gold6.webp" alt="Medal 6">
-                        <img src="/assets/medals/silver1.webp" alt="Medal 7">
-                        <img src="/assets/medals/silver2.webp" alt="Medal 8">
+                        <img src="../assets/medals/gold5.webp" alt="Medal 5">
+                        <img src="../assets/medals/gold6.webp" alt="Medal 6">
+                        <img src="../assets/medals/silver1.webp" alt="Medal 7">
+                        <img src="../assets/medals/silver2.webp" alt="Medal 8">
                     </div>
                     <div class="row">
-                        <img src="/assets/medals/silver3.webp" alt="Medal 9">
-                        <img src="/assets/medals/silver4.webp" alt="Medal 10">
-                        <img src="/assets/medals/silver5.webp" alt="Medal 11">
-                        <img src="/assets/medals/silver6.webp" alt="Medal 12">
+                        <img src="../assets/medals/silver3.webp" alt="Medal 9">
+                        <img src="../assets/medals/silver4.webp" alt="Medal 10">
+                        <img src="../assets/medals/silver5.webp" alt="Medal 11">
+                        <img src="../assets/medals/silver6.webp" alt="Medal 12">
                     </div>
                     <div class="row">
-                        <img src="/assets/medals/bronze1.webp" alt="Medal 13">
-                        <img src="/assets/medals/bronze2.webp" alt="Medal 14">
-                        <img src="/assets/medals/bronze3.webp" alt="Medal 15">
+                        <img src="../assets/medals/bronze1.webp" alt="Medal 13">
+                        <img src="../assets/medals/bronze2.webp" alt="Medal 14">
+                        <img src="../assets/medals/bronze3.webp" alt="Medal 15">
                     </div>
                 </div>
             </div>
@@ -193,6 +194,6 @@
         </section>
     </footer>
 
-    <script src="/js/profile.js"></script>
+    <script src="../js/profile.js"></script>
 </body>
 </html>

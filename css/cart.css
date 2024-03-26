@@ -34,7 +34,7 @@ main {
     background-color: rgb(235, 235, 235);
     border-radius: 20px; 
     padding: 0px 0px 20px 0px;
-    background-image: url('/assets/images/cartbg.png');
+    background-image: url('../assets/images/cartbg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -404,8 +404,7 @@ a {
 
 
 .footer {
-    background-color: #3498db; 
-    height: 100px; 
+    margin-top: 2rem;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -478,6 +477,10 @@ a {
 }
 
 @media only screen and (max-width: 800px) {
+    .content{
+        margin-top: -3rem;
+    }
+
     .checkout-content {
         grid-template-columns: 1fr;
     }

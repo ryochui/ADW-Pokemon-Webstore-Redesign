@@ -225,7 +225,7 @@ a{
 }
 
 #r3 .card-content {
-    background-image: url('/assets/images/fullnightbg.jpg');
+    background-image: url('../assets/images/fullnightbg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -235,7 +235,7 @@ a{
 }
 
 #r4 .card-content {
-    background-image: url('/assets/images/fullbg3.jpg');
+    background-image: url('../assets/images/fullbg3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;

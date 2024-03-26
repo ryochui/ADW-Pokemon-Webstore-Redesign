@@ -50,7 +50,7 @@ main {
 }
 
 .upper-user-info{
-    background-image: url('/assets/images/wallpaper.jpg');
+    background-image: url('../assets/images/wallpaper.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size:cover;
@@ -276,7 +276,7 @@ hr {
     flex-direction: column;
     justify-content:space-between;
     background-color: #24CAAB;
-    background-image: url('/assets/profilePokemons/mewtwo2.jpg');
+    background-image: url('../assets/profilePokemons/mewtwo2.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size:cover;
@@ -310,7 +310,7 @@ hr {
 
 .column2 {
     background: #e7e7e7;
-    background-image: url('/assets/images/cartbg.png');
+    background-image: url('../assets/images/cartbg.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -355,6 +355,7 @@ hr {
 .footer {
     background-color: #3498db; 
     height: 100px; 
+    margin-top: 2rem;
 }
 
 /** Media Queries **/
@@ -470,6 +471,11 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+
+    main{
+        margin-top: -3rem;
+    }
+
     .user-pic,
     .user-info,
     .social {

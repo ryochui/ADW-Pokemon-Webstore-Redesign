@@ -240,6 +240,7 @@ a{
 .footer {
     background-color: #3498db; 
     height: 100px; 
+    margin-top: 2rem;
 }
 
 /* Billing Information Styles */
