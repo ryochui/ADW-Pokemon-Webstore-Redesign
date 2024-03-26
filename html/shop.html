@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individual Listing Page</title>
-    <link rel="stylesheet" href="/css/catListing.css">
+    <link rel="stylesheet" href="/css/shop.css">
     <link rel="stylesheet" href="../css/webstore_nav.css">
-
-
+    <link rel="stylesheet" href="../css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +49,118 @@
     </header>
     
     <main>
-        <!--Content Here-->
+        <div class="row banner" id="r1">
+            <div class="banner-content">
+                <img src="../assets/images/banner.jpg" alt="">
+                <h2 class="title">Explore, Capture, Conquer: Your Pokémon Adventure Awaits!</h2>
+                <p class="description">Prepare for an electrifying Pokémon adventure at our one-stop shop! With everything from Poké Balls to Incense, we've got all the essentials you need to dive into thrilling battles and captivating quests. Unleash your inner trainer and embark on your epic journey today!</p>
+            </div>
+        </div>
+    
+        <div class="row-2" id="r2">
+            <div class="cards-container row-2">
+                
+                <div class="cat-card" data-link="cat1Pokeball.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webhome_pokeball.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Poké Ball</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat2Incense.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webhome_incense.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Incense</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat3Incubator.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_incubator.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Incubators</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat4LuckyEgg.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_luckyegg.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Lucky Egg</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat5Module.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_luremodule.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Lure Modules</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat6Medallion.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_medallion.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Team Medallion</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat7Radar.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_radar.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Radars</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat8RaidPass.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_raidpass.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Raid Passes</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat9Tickets.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_ticket.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Tickets</p>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-link="cat10Pokecoins.html" onclick="navigateToLink(this)">
+                    <img src="/assets/images/webstore_cat/webstore_pokecoin.png" alt="Product Image">
+                    <div class="overlay">
+                        <p class="title"> Poké Coins</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    
+        <div class="row-3 card" id="r3">
+            <div class="card-content">
+                <h2>Found something cool? Make it yours here at the Pokémon GO Store!</h2>
+                <div class="row">
+                    <div class="column">
+                        <a href="register.html" class="btn">Register</a>
+                    </div>
+                    <div class="column">
+                        <a href="profile.html" class="btn">Go to Your Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row-3 card" id="r4">
+            <div class="card-content">
+                <h2>Discover amazing finds at the Pokémon GO Store! Explore now!</h2>
+                <div class="row">
+                    <div class="column">
+                        <a href="shopping.html" class="btn">Shop Now</a>
+                    </div>
+                    <div class="column">
+                        <a href="transact_history.html" class="btn">View History</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer class="footer">

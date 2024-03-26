@@ -269,6 +269,8 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 .container-card .column,
@@ -586,7 +588,6 @@ hr {
         text-align: left;
         margin-bottom: 1rem;
         color: white;
-
     }
 
     #prev-button{
@@ -605,6 +606,7 @@ hr {
     .container-card,
     .container-card-2 {
         flex: 1 1 100%;
+        margin-left: 3rem;
     }
 
     .mini-card {
