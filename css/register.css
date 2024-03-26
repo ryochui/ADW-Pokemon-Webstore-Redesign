@@ -91,11 +91,26 @@ input[type="password"]:focus {
     position: relative;
 }
 
-.input-container input[type="text"].with-icon {
+.input-container input[type="text"].with-icon,
+.input-container input[type="password"].with-icon{
     padding-left: 40px;
     background-image: url('path_to_profile_icon_image');
     background-repeat: no-repeat;
     background-position: 10px center;
+}
+
+.input-container.success input.with-icon{
+    border-color: #09c372;
+}
+
+.input-container.error input.with-icon{
+    border-color: #ff3860;
+}
+
+.input-container .error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
 
 .icon {

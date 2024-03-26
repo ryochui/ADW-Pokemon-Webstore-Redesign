@@ -53,59 +53,66 @@
                 </div>
             </div>
             <div class="payment-summary">
-                
-                    <div class="payment-header">
-                        <h2>Card Information</h2>
-                    </div>
-                    <div class="payment-details">   
-                        <div class="detail-row">
-                            <label for="email" class="detail-label">Email</label>
-                            <input type="email" id="email" class="detail-value" placeholder="Enter your email">
+                    <form id="form" action="transact_history.html">
+                        <div class="payment-header">
+                            <h2>Card Information</h2>
                         </div>
-                        <div class="detail-row">
-                            <label for="cardNumber" class="detail-label">Card Number</label>
-                            <input type="text" id="cardNumber" class="detail-value" placeholder="1234 1234 1234 1234">
-                            <img src="/assets/cards/visa.png" alt="Visa Logo">
-                        </div>
-                        <div class="detail-row">
-                            <label for="expiryDate" class="detail-label">Expiry Date</label>
-                            <input type="text" id="expiryDate" class="detail-value" placeholder="MM/YY">
-                        </div>
-                        <div class="detail-row">
-                            <label for="cvc" class="detail-label">CVC</label>
-                            <input type="text" id="cvc" class="detail-value" placeholder="CVC">
-                        </div>
-                        <div class="detail-row">
-                            <label for="cardholderName" class="detail-label">Cardholder Name</label>
-                            <input type="text" id="cardholderName" class="detail-value" placeholder="Full Name on Card">
-                        </div>
-                        <div class="detail-row">
-                            <label for="countryRegion" class="detail-label">Country or Region</label>
-                            <select id="countryRegion" class="detail-value">
-                                <option value="Philippines">Philippines</option>
-                                <option value="United States">United States</option>
-                                <option value="United Kingdom">United Kingdom</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Germany">Germany</option>
-                                <option value="France">France</option>
-                                <option value="Japan">Japan</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="India">India</option>
-                                <option value="China">China</option>
-                            </select>
-                        </div>
-                        <div class="detail-row rounded-border">
-                            <label for="phoneNumber" class="detail-label">Securely save my information for 1-click checkout</label>
-                            <div class="input-container">
-                                <input type="text" id="phoneNumber" class="detail-value" placeholder="0905 123 4567">
-                                <span class="optional-label">Optional</span>
+                        <div class="payment-details">   
+                            <div class="detail-row">
+                                <label for="email" class="detail-label">Email</label>
+                                <div class="error"></div>
+                                <input type="email" id="email" class="detail-value" placeholder="Enter your email">
+                            </div>
+                            <div class="detail-row">
+                                <label for="cardNumber" class="detail-label">Card Number</label>
+                                <div class="error"></div>
+                                <input type="text" id="cardNumber" class="detail-value" placeholder="1234 1234 1234 1234">
+                                <img src="/assets/cards/visa.png" alt="Visa Logo">
+                            </div>
+                            <div class="detail-row">
+                                <label for="expiryDate" class="detail-label">Expiry Date</label>
+                                <div class="error"></div>
+                                <input type="text" id="expiryDate" class="detail-value" placeholder="MM/YY">
+                            </div>
+                            <div class="detail-row">
+                                <label for="cvc" class="detail-label">CVC</label>
+                                <div class="error"></div>
+                                <input type="text" id="cvc" class="detail-value" placeholder="CVC">
+                            </div>
+                            <div class="detail-row">
+                                <label for="cardholderName" class="detail-label">Cardholder Name</label>
+                                <div class="error"></div>
+                                <input type="text" id="cardholderName" class="detail-value" placeholder="Full Name on Card">
+                            </div>
+                            <div class="detail-row">
+                                <label for="countryRegion" class="detail-label">Country or Region</label>
+                                <select id="countryRegion" class="detail-value">
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="France">France</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="India">India</option>
+                                    <option value="China">China</option>
+                                </select>
+                            </div>
+                            <div class="detail-row rounded-border">
+                                <label for="phoneNumber" class="detail-label">Securely save my information for 1-click checkout</label>
+                                <div class="input-container">
+                                    <div class="error"></div>
+                                    <input type="text" id="phoneNumber" class="detail-value" placeholder="0905 123 4567">
+                                    <span class="optional-label">Optional</span>
+                                </div>
+                            </div>
+                            <div class="detail-row">
+                                <button class="pay-button" id="payButton" >Pay Now</button>
                             </div>
                         </div>
-                        <div class="detail-row">
-                            <button class="pay-button" id="payButton" onclick="validateForm()">Pay Now</button>
-                        </div>
-                    </div>
+                    </form>
             </div>
         </div>
     </main>
