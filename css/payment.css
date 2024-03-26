@@ -56,7 +56,7 @@ body {
     margin-bottom: 20px;
     padding: 0px 0px 0px 0px;
     text-align: right;
-    padding-right:11rem;
+    padding-right:10rem;
 }
 
 .payment-header h2 {
@@ -78,9 +78,9 @@ body {
 }
 
 .detail-row {
-    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -100,7 +100,7 @@ body {
 .side-detail-end {
     display: flex;
     align-items: center;
-    padding: 190px 10px 50px 250px;
+    padding: 313px 10px 50px 250px;
 }
 
 .underline{
@@ -164,15 +164,14 @@ body {
 .payment-details input[type="text"],
 .payment-details input[type="email"],
 .payment-details select {
-    width: calc(100% - 130px);
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.payment-details img {
-    width: 50px;
-    height: auto;
+.payment-details select{
+    width: 106%;
 }
 
 .optional-label {
@@ -180,7 +179,7 @@ body {
 }
 
 .pay-button {
-    width: 100%;
+    width: 106%;
     padding: 10px;
     background-color: #24CAAB;
     color: white;
@@ -204,6 +203,7 @@ body {
 }
 
 .rounded-border {
+    width: 100%;
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 10px;
@@ -293,9 +293,22 @@ body {
     .payment-details input[type="text"],
     .payment-details input[type="email"],
     .payment-details select {
-    width: calc(100% - 130px);
+    width: 100%;
     padding: 10px;
     font-size: 16px;
+    }
+
+    .pay-button {
+        width: 103%;
+        font-size: 16px;
+    }
+
+    .payment-details select{
+        width: 103%;
+    }
+
+    .payment-header {
+        padding-right:10rem;
     }
 
 }
@@ -359,21 +372,6 @@ body {
         font-weight: 700;
     }
 
-    .payment-details input[type="text"],
-    .payment-details input[type="email"],
-    .payment-details select {
-    width: calc(100% - 130px);
-    padding: 10px;
-    font-size: 16px;
-    }
-
-    .payment-header {
-        margin-bottom: 20px;
-        padding: 0px 0px 0px 0px;
-        text-align: right;
-        padding-right:8rem;
-    }
-
     .payment-details {
         padding-right:8rem;
         padding-left: 3rem;
@@ -383,6 +381,27 @@ body {
     .optional-label {
         color: #888;
         font-size: 14px;
+    }
+
+    .payment-details input[type="text"],
+    .payment-details input[type="email"],
+    .payment-details select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    }
+
+    .pay-button {
+        width: 105%;
+        font-size: 16px;
+    }
+
+    .payment-details select{
+        width: 104.5%;
+    }
+
+    .payment-header {
+        padding-right:7rem;
     }
 
 }
@@ -478,6 +497,15 @@ body {
         margin-top: 50px;
     }
 
+    .pay-button {
+        width: 105.5%;
+        font-size: 16px;
+    }
+
+    .payment-details select{
+        width: 104.5%;
+    }
+
 }
 
 @media (max-width: 360px) {
@@ -544,6 +572,15 @@ body {
         padding-right:4rem;
         padding-left: 0rem;
         margin-top: 50px;
+    }
+
+    .pay-button {
+        width: 109%;
+        font-size: 14px;
+    }
+
+    .payment-details select{
+        width: 104.5%;
     }
 
 }
