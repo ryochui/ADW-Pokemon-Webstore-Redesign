@@ -299,12 +299,13 @@ main > section {
 
 #actual-news {
     display: grid;
-    overflow: hidden;
+    overflow-y: scroll;
     padding: 20px;
 }
 
 #actual-news div {
-    display: none;
+    position: absolute;
+    visibility: hidden;
     width: 100%;
     opacity: 0;
     color: #FDFEFD;
@@ -331,8 +332,10 @@ main > section {
 }
 
 #actual-news .active {
-    display: block;
+    position: relative;
+    visibility:visible;
     opacity: 100;
+    transition: all 0.3s linear;
 }
 
 .slide-circle {
@@ -597,65 +600,161 @@ main > section {
 #items {
     background-image: url('../assets/images/items_bg.svg');
     background-size: cover;
+    overflow: hidden;
 }
 
 .item-container {
     position: absolute;
-    display: grid;
-    grid-template-columns: 0.7fr 1fr;
-    z-index: 0;
-    transition: all 0.5s ease;
-    pointer-events: auto;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    padding: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-.item-container:nth-child(1) {
-    left: 0;
-    top: 0;
+.item-container.pokeball {
+    top: 0%;
+    left: 10%;
+}
+
+.item-container.incense {
+    top: 25%;
+    left: 0%;
+}
+
+.item-container.incubators {
+    top: 60%;
+    left: 5%;
+}
+
+.item-container.lucky-egg {
+    top: 0%;
+    left: 30%;
+}
+
+.item-container.lure-modules {
+    top: 25%;
+    left: 25%;
+}
+
+.item-container.team-medal {
+    top: 60%;
+    left: 30%;
+}
+
+.item-container.radars {
+    top: 10%;
+    left: 50%;
+}
+
+.item-container.raid-pass {
+    top: 40%;
+    left: 60%;
+}
+
+.item-container.ticket {
+    top: 65%;
+    left: 70%;
+}
+
+.item-container.pokecoin {
+    top: 0%;
+    left: 70%;
+}
+
+.item-container.active{
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-30% - 50px), -50%);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    z-index: 3;
+}
+
+.item-container.inactive {
+    top: -1000vh;
+    transition: all 1s ease-in-out;
+}
+
+.item-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.item-wrapper.active {
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.item-img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.item-img img:nth-child(1) {
+    width: 150px;
+    z-index: 1;
+    
+}
+
+.item-img img:nth-child(2) {
+    position: absolute;
+    width: 200px;
+    transform: translate(-30% , 15%);
+    z-index: 0;
 }
 
 .item-content {
-    opacity: 0;
     display: none;
-    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: -100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-.item-container::after {
-    opacity: var(--displayContainer, 1);
-    position: absolute;
-    content:'';
-    width: 30%;
-    height: 60%;
-    z-index: -1;
-    border: solid 7px red;  
+.item-content h1 {
+    font-size: 3em;
+    font-family: Roboto Condensed, sans-serif;
+    letter-spacing: 5px;
+    font-weight: 800;
 }
 
-.item-container.active {
-    top: inherit;
-    left: inherit;
-    z-index: 2;
-    position: absolute;
-    left: 50px;
-    /* transform: translateX(50%); */
-    width: 60svw;
-    height: 60svh;
-    align-items: center;
-    justify-items: center;
-    background-color: #A5D1BC;
-    transition: all 0.5s ease;
+.item-content hr{
+    margin-bottom: 1em;
+}
+
+.item-content p {
+    line-height: 1.25em;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
 }
 
 .item-content.active {
-    display: grid;
-    justify-items: center;
-    grid-template-rows: 0.5fr 1fr;
-    opacity: 1;
-    padding: 50px;
-    height: 100%;
-    transition: all 0.5s ease;
+    display: inline;
+    opacity: 100;
+    visibility: visible;
+    position: relative;
+    bottom: 0;
+    animation: contentActive 0.8s 1;
 }
 
-.item-content.active h1 {
-    font-size: 5em;
+@keyframes contentActive {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        bottom: -100vh;
+    }
+    to {
+        opacity: 100;
+        visibility: visible;
+        position: relative;
+        bottom: 0;
+    }
 }
 
 /*GAMEPLAY*/

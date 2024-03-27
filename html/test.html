@@ -15,294 +15,39 @@
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-section {
-    position: relative;
-    display: grid;
-    height: 100svh;
-    width: 100svw;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-}
-
-        #npcs {
-    position: relative;
-    background: url(../assets/images/npcs_bg.png), #282d37;
-    background-blend-mode: screen;
-    background-repeat: no-repeat;
+body {
+    background-image: url('../assets/images/items_bg.svg');
     background-size: cover;
-    background-position: center;
-    align-items: flex-end;
-    overflow: hidden;
 }
 
-#npcs-slider {
-    display: flex;
-    top: auto;
-    position: relative;
-    width: 80svw;
-    height: 80svh;
-    overflow: hidden;
+.item-container {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
 }
 
-#npcs-slider > div {
-    height: 100%;
-    width: 100%;
-    flex: 1 0 100%;
+.item-wrapper {
     display: grid;
-    justify-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 10px;
 }
 
-.npc-img {
-    top: auto;
-    position: absolute;
-    z-index: 1;
-    justify-self: center;
-    /* width: clamp(300px, 5svh, 25%); */
-    width: 300px;
-}
-
-.npc-desc {
-    position: relative;
-    font-size: 1.3rem;
-    z-index: 0;
-    width: 60%;
-    font-family: Roboto Condensed, sans-serif;
-    font-weight: 400;
-}
-
-.npc-desc > h1 {
-    font-family: Lato, sans-serif;
-    font-weight: 700;
-}
-
-.npc-name {
-    font-family: Lato, sans-serif;
-    font-size: 5rem;
-    display: flex;
-    align-self: flex-end;
-    font-weight: 800;
-    letter-spacing: 5px;
-}
-
-.npc-dialog {
-    top: 20px;
-    position: relative;
-    text-align: justify;
-    z-index: 2;
-    grid-column: span 2;
-    padding: 20px;
-    background-color: #FFFEFE;
-    height: fit-content;
-    font-family: Roboto Condensed, sans-serif;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    width: 60%;
-    color:#246873;
-    box-shadow: rgba(36, 104, 115, 0.25) 0px 50px 100px -20px, rgba(36, 104, 115, 0.3) 0px 30px 60px -30px, rgba(36, 104, 115, 0.35) 0px -2px 6px 0px inset;
-}
-
-#npcs-nav {
-    height: 375px;
-    position: absolute;
-    display: flex;
-    align-items: start;
-    justify-self: flex-end;
-    align-self: center;
-    flex-direction: column;
-    gap: 10px;
-    right: 3svw;
-    overflow-y: auto;
-}
-
-.npc-thumbnail {
-    position: relative;
-    background: url(../assets/images/npcs_bg.png), #282d37;
-    background-blend-mode: screen;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 75px;
-    height: 75px;
-    overflow: hidden;
-    align-items: flex-start;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.npc-thumbnail img {
-    position: relative;
-    width: 150%;
-    right: 20px;
-    object-fit: cover;
-}
     </style>
 </head>
 <body>
-    <section id="npcs">
-        <div id="npcs-slider">
-            <div id="willow" name="willow">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">PROF. WILLOW</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_professorwillow.webp" />
+    <div class="item-container">
+        <div class="item-wrapper">
+            <div class="item-img">
+                <img src="../assets/items/Poke Balls/Poké Balls_Poké_Ball.webp" alt="">
             </div>
-            <div id="arlo" name="arlo">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">ARLO</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_arlo.webp" />
-            </div>
-            <div id="cliff" name="cliff">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">CLIFF</div>
-                <div class="npc-dialog">Blanche. You overthink. You overcalculate. You overcomplicate. 
-                    But can't you see? It's pretty simple. Your time as a leader is <b><i>OVER!!!.</i></b></div>
-                <img class="npc-img" src="../assets/NPC/npc_cliff.webp" />
-            </div>
-            <div id="sierra" name="sierra">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">SIERRA</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_sierra.webp" />
-            </div>
-            <div id="giovanni" name="giovanni">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">GIOVANNI</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_giovanni.png" />
-            </div>
-            <div id="rhi" name="rhi">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">RHI</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_rhi.webp" />
-            </div>
-            <div id="blanche" name="blanche">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">BLANCHE</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_blanche.webp" />
-            </div>
-            <div id="candela" name="candela">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">CANDELA</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_candela.webp" />
-            </div>
-            <div id="spark" name="spark">
-                <div class="npc-desc">
-                    <h1>Team GO Rocket Leader</h1>
-                    <hr style="margin-bottom: 0.5rem; margin-top: 0.1rem;"/>
-                    <p>A Team Go Rocket leader and a former member of Team Valor. After he mysteriously
-                    left the team, he contributed to Team GO Rocket's
-                    Shadow Program.</p>
-                </div>
-                <div class="npc-name">SPARK</div>
-                <div class="npc-dialog">Candela. After all this time, you still haven't changed. Tsk. Remember, 
-                    fire is a fickle thing. When controlled, it provides warmth, but in the wrong hands, it burns. You will regret
-                    the day you took what was rightfully mine.</div>
-                <img class="npc-img" src="../assets/NPC/npc_spark.webp" />
+            <div class="item-content">
+                <h1>Poke Ball</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, 
+                    morbi torquent potenti proin hac sociis pretium, 
+                    fringilla nisi varius cubilia egestas facilisi.</p>
             </div>
         </div>
-        <div id="npcs-nav">
-            <a href="#willow"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_professorwillow.webp">
-            </div></a>
-            <a href="#arlo"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_arlo.webp">
-            </div></a>
-            <a href="#cliff"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_cliff.webp">
-            </div></a>
-            <a href="#sierra"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_sierra.webp">
-            </div></a>
-            <a href="#giovanni"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_giovanni.png">
-            </div></a>
-            <a href="#rhi"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_rhi.webp">
-            </div></a>
-            <a href="#blanche"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_blanche.webp">
-            </div></a>
-            <a href="#candela"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_candela.webp">
-            </div></a>
-            <a href="#spark"><div class="npc-thumbnail">
-                <img src="../assets/NPC/npc_spark.webp">
-            </div></a>
-        </div>
-    </section>
+    </div>
 </body>
 </html>

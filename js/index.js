@@ -9,7 +9,7 @@ let pokemonBG = document.querySelectorAll(".pokemon-bg");
 let pokemonMINI = document.querySelectorAll(".pokemon-card");
 let itemActive = 0;
 //items
-let items = document.querySelectorAll(".item-container")
+let items = document.querySelectorAll(".item-container");
 
 hamburger.addEventListener("click", function toggleSideBar() {
     nav.classList.toggle("active");
@@ -36,21 +36,29 @@ function openNews(page) {
     newsArr[page].classList.toggle("active");
 };
 
-items.forEach(item => {
-    var isDisplayed = true;
+items.forEach((item, index) => {
     item.addEventListener("click", function () {
+        var item_content = item.querySelector(".item-content");
+        var item_wrapper = item.querySelector(".item-wrapper");
 
-        if (isDisplayed) {
-            item.style.setProperty('--displayContainer', '0');
-            isDisplayed = false;
-        } else {
-            item.style.setProperty('--displayContainer', '1');
-            isDisplayed = true;
-        }
         item.classList.toggle("active");
-        item.querySelector(".item-content").classList.toggle("active");
+        item_content.classList.toggle("active");
+        item_wrapper.classList.toggle("active");
+
+        itemCheck(index);
     });
 });
+
+function itemCheck(index) {
+    for (var i=0; i<items.length; i++){
+        if (i == index) {
+            continue;
+        }
+        if (!(items[i].classList.contains("active"))){
+            items[i].classList.toggle("inactive");
+        }
+    }
+};
 
 //POKEMON FUNCTIONS
 function showSlider(){
