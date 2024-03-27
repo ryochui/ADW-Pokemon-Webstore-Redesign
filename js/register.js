@@ -19,55 +19,64 @@ const setSuccess = element => {
 };
 
 function validateForm() {
-    let isValid = true;
-    
     const username = document.getElementById("username");
-    const email = document.getElementById("email")
+    const pid = document.getElementById('playerID');
+    const email = document.getElementById("email");
     const password = document.getElementById("password");
-    const password2 = document.getElementById("repeat_password")
+    const password2 = document.getElementById("repeat_password");
 
     const usernameValue = username.value.trim();
+    const pidValue = pid.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
+    
+    let isValid = true;
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    if(usernameValue === '') {
-        setError(document.getElementById("username"), 'Username is required');
+    if(username.value === '') {
+        setError(username, 'Username is required');
         isValid = false;
     } else {
-        setSuccess(document.getElementById("username"));
+        setSuccess(username);
+    }
+
+    if(pidValue === '') {
+        setError(pid, 'Player ID is required');
+        isValid = false;
+    }else {
+        setSuccess(pid);
     }
 
     if (emailValue === '') {
-        setError(document.getElementById("email"), 'Email is required');
+        setError(email, 'Email is required');
         isValid = false;
     } else if (!emailRegex.test(emailValue)) {
-        setError(document.getElementById("email"), "Please enter a valid email address.");
+        setError(email, "Please enter a valid email address.");
         isValid = false;
     } else {
-        setSuccess(document.getElementById("email"));
+        setSuccess(email);
     }
 
     if(passwordValue === '') {
-        setError(document.getElementById("password"), 'Password is required');
+        setError(document.getElementById('password'), 'Password is required');
         isValid = false;
     } else if (passwordValue.length < 8 ) {
-        setError(document.getElementById("password"), 'Password must be at least 8 character.');
+        setError(document.getElementById('password'), 'Password must be at least 8 character.');
         isValid = false;
     } else {
-        setSuccess(document.getElementById("password"));
+        setSuccess(document.getElementById('password'));
     }
 
     if(password2Value === '') {
-        setError(document.getElementById("repeat_password"), 'Please confirm your password');
+        setError(password2, 'Please confirm your password');
         isValid = false;
-    } else if (password2Value !== password) {
-        setError(document.getElementById("repeat_password"), "Passwords doesn't match");
+    } else if (password2Value !== passwordValue) {
+        setError(password2, "Passwords doesn't match");
         isValid = false;
     } else {
-        setSuccess(document.getElementById("repeat_password"));
+        setSuccess(password2);
     }
 
     
@@ -80,3 +89,11 @@ form.addEventListener('submit', e => {
         e.preventDefault();
     } 
 });
+
+var pid = document.getElementById('playerID');
+pid.addEventListener('focus', function() {
+    pid.value = '3201 1192 2365';
+    pid.disabled = true;    
+});
+
+

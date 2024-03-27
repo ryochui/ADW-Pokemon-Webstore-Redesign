@@ -43,6 +43,20 @@ a{
     flex-direction: column;
 }
 
+.column.success input{
+    border-color: #09c372;
+}
+
+.column.error input{
+    border-color: #ff3860;
+}
+
+.column .error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
 .user-info{
     padding: 0rem 1rem 0rem 1rem;
     
