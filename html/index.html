@@ -33,7 +33,6 @@
         </svg>
         <p>SHOP</p>
     </aside></a>
-    <!-- <aside id="frontUI"><hr>PLACEHOLDER<hr></aside> FIT LATER ON-->
     <video id="home-video" autoplay muted loop plays-inline>
         <source src="../assets/videos/GO-home-video.mp4" />
     </video>
@@ -43,7 +42,7 @@
                 <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en&gl=US"><img src="../assets/images/home-gplay.png" class="home-icon"></a>
                 <a href="https://apps.apple.com/us/app/pok%C3%A9mon-go/id1094591345"><img src="../assets/images/home-appstore.png" class="home-icon"></a>
                 <div class="container">
-                    <a href="#season"><img src="../assets/images/GO-fest-icon.png" id="home-go-icon"></a>
+                    <a onclick="moveToSection('season')"><img src="../assets/images/GO-fest-icon.png" id="home-go-icon"></a>
                 </div>
             </div>
         </section>
@@ -321,6 +320,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Poke Balls/Poké Balls_Poké_Ball.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                POKEBALL
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Poké Ball</h1>
@@ -338,6 +340,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Incense/Incense_Daily_Adventure_Incense.png" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                INCENSE
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Incense</h1>
@@ -351,6 +356,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Incubators/Egg Incubators_Incubator_Limited.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                INCUBATORS
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Incubator</h1>
@@ -364,6 +372,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Lucky Egg/Lucky_Egg.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                LUCKY EGG
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Lucky Egg</h1>
@@ -377,6 +388,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Lure Modules/Lure_Modules_Lure_Module.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                LURE MODULES
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Lure Modules</h1>
@@ -390,6 +404,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Medallion/Team_Medallion.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                TEAM MEDALLION
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Team Medallion</h1>
@@ -403,6 +420,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Radars/Rocket Radars_Rocket_Radar.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                RADARS
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Radar</h1>
@@ -416,6 +436,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Raid Passes/Raid Passes_Raid_Pass.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                RAID PASS
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Raid Pass</h1>
@@ -429,6 +452,9 @@
                         <div class="item-img">
                             <img src="../assets/items/Tickets/Tickets_Ticket.webp" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                TICKET
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Tickets</h1>
@@ -442,6 +468,9 @@
                         <div class="item-img">
                             <img src="../assets/categories/pokecoins.png" alt="">
                             <img src="../assets/images/items_bgbox.png">
+                            <p class="item-hover">
+                                POKECOIN
+                            </p>
                         </div>
                         <div class="item-content">
                             <h1>Poke Coin</h1>
@@ -453,7 +482,34 @@
         </section>
         <section id="gameplay">
             <!-- Slider main container -->
-                <div class="swiper">
+                <div class="swiper-desktop">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="../assets/features/features_collection.png" data-tilt>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/features/features_custom.png" data-tilt>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/features/features_achievements.png" data-tilt>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/features/features_fights.png" data-tilt>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../assets/features/features_explore.png" data-tilt>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-mobile">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->

@@ -79,8 +79,8 @@ pokemonMINI.forEach((img, index) => {
 });
 
 
-//Swiper
-const swiper = new Swiper('.swiper', {
+//Swiper Desktop
+const swiper_desktop = new Swiper('.swiper-desktop', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -88,6 +88,35 @@ const swiper = new Swiper('.swiper', {
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "3",
+      coverflowEffect: {
+        rotate: 75,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+// Swiper Mobile
+const swiper_mobile = new Swiper('.swiper-mobile', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "1",
       coverflowEffect: {
         rotate: 75,
         stretch: 0,
