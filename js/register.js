@@ -35,7 +35,7 @@ function validateForm() {
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    if(username.value === '') {
+    if(usernameValue === '') {
         setError(username, 'Username is required');
         isValid = false;
     } else {

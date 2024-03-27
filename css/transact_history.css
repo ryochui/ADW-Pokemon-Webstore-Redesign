@@ -123,6 +123,47 @@ a{
     margin-top: 20px;
 }
 
+.billing-row.success input.name-on-card,
+.billing-row.success input.credit-card-number,
+.billing-row.success input.expiry-month,
+.billing-row.success input.expiry-year,
+.billing-row.success input.security-code,
+.billing-row.hidden.success input.name-on-card,
+.billing-row.hidden.success input.credit-card-number,
+.billing-row.hidden.success input.expiry-month,
+.billing-row.hidden.success input.expiry-year,
+.billing-row.hidden.success input.security-code{
+    border-color: #09c372;
+}
+
+.billing-row.error input.name-on-card,
+.billing-row.error input.credit-card-number,
+.billing-row.error input.expiry-month,
+.billing-row.error input.expiry-year,
+.billing-row.error input.security-code,
+.billing-row.hidden.error input.name-on-card,
+.billing-row.hidden.error input.credit-card-number,
+.billing-row.hidden.error input.expiry-month,
+.billing-row.hidden.error input.expiry-year,
+.billing-row.hidden.error input.security-code{
+    border-color: #ff3860;
+}
+
+.billing-row .error,
+.billing-row .error,
+.billing-row .error,
+.billing-row .error,
+.billing-row .error,
+.billing-row.hidden .error,
+.billing-row.hidden .error,
+.billing-row.hidden .error,
+.billing-row.hidden .error,
+.billing-row.hidden .error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
 .billing-row {
     display: flex;
     align-items: center;

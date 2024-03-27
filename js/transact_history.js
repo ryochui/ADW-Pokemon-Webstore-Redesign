@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // const form = document.getElementById('form')
+    // form.addEventListener('submit', e => {
+    // e.preventDefault();
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
     const transactions = document.querySelectorAll(".transaction");
@@ -148,53 +151,159 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", removeBillingOption);
     });
 
-    // Event listener for save button in new billing option section
-    const newBillingOption = document.querySelector(".new-billing-option");
-    const saveButton = newBillingOption.querySelector(".save-new");
-    // Event listener for save button in new billing option section
-    saveButton.addEventListener("click", function() {
-        // Get selected card type
-        const cardTypeSelect = newBillingOption.querySelector(".card-type select");
-        const cardType = cardTypeSelect ? cardTypeSelect.value : null; // Check if cardTypeSelect is null
 
-        if (cardType) {
-            // Duplicate existing billing option
-            const existingBillingOption = document.querySelector(".billing-option");
-            const billingOption = existingBillingOption.cloneNode(true);
-            
-            // Update card logo and title based on selected card type
-            const cardLogo = billingOption.querySelector(".card-logo img"); // Get the img element
-            const logoPath = getCardLogoPath(cardType);
-            console.log("Logo path:", logoPath); // Log logo path
-            cardLogo.src = logoPath; // Set the src attribute with the logo path
-            cardLogo.alt = cardType; // Set alt attribute for accessibility
 
-            // Update card title without "ending in XXXX"
-            const cardTitle = billingOption.querySelector(".card-title");
-            cardTitle.textContent = cardType.charAt(0).toUpperCase() + cardType.slice(1); 
+    const setError = (element, message) => {
+        const detailRow = element.parentElement;
+        const errorDisplay = detailRow.querySelector('.error');
+    
+        errorDisplay.innerText = message;
+        detailRow.classList.add('error');
+        detailRow.classList.remove('success');
+    };
+    
+    const setSuccess = element => {
+        const detailRow = element.parentElement;
+        const errorDisplay = detailRow.querySelector('.error');
+    
+        errorDisplay.innerText = '';
+        detailRow.classList.add('success');
+        detailRow.classList.remove('error');
+    };
+    
+    function validateForm() {
+        const noc = document.getElementById("name-on-card");
+        const ccn = document.getElementById("credit-card-number");
+        const em = document.getElementById("expiry-month");
+        const ey = document.getElementById("expiry-year");
+        const sc = document.getElementById("security-code");
+    
+        const nocValue = noc.value.trim();
+        const ccnValue = ccn.value.trim();
+        const emValue = em.value.trim();
+        const eyValue = ey.value.trim();
+        const scValue = sc.value.trim();
+        
+        const nocRegex = /^[a-zA-Z\s]+$/;
+        const ccnRegex = /^\d{16}$/;
+        const emRegex = /^(0[1-9]|1[0-2])$/;
+        const eyRegex = /^20(2[4-9]|[3-9]\d)$/;
+        const scRegex = /^\d{3}$/;
+    
+        let isValid = true;
+    
+        if (nocValue === '') {
+            setError(noc, 'Name is required');
+            isValid = false;
+        } else if (!nocRegex.test(nocValue)) {
+            setError(noc, "Please enter a valid name.");
+            isValid = false;
+        } else {
+            setSuccess(noc);
+        }
 
-            // Update added date
-            const addedDate = billingOption.querySelector(".added-date");
-            const currentDate = new Date();
-            addedDate.textContent = (currentDate.getMonth() + 1) + "/" + currentDate.getFullYear().toString().substr(-2);
+        if (ccnValue === '') {
+            setError(ccn, 'Credit card number is required');
+            isValid = false;
+        } else if (!ccnRegex.test(ccnValue)) {
+            setError(ccn, "Please enter a valid credit card number.");
+            isValid = false;
+        } else {
+            setSuccess(ccn);
+        }
 
-            // Append new billing option to the DOM
-            const billingInformation = document.querySelector(".billing-information");
-            billingInformation.insertBefore(billingOption, newBillingOption);
+        if (emValue === '') {
+            setError(em, 'Expiry month is required');
+            isValid = false;
+        } else if (!emRegex.test(emValue)) {
+            setError(em, "Please enter a valid expiry month.");
+            isValid = false;
+        } else {
+            setSuccess(em);
+            if (eyValue === '') {
+                setError(ey, 'Expiry year is required');
+                isValid = false;
+            } else if (!eyRegex.test(eyValue)) {
+                setError(ey, "Please enter a valid expiry year.");
+                isValid = false;
+            } else {
+                setSuccess(ey);
+            }
+        }
 
-            // Event listener for edit button of new billing option
-            const editBtn = billingOption.querySelector(".edit-btn");
-            editBtn.addEventListener("click", handleNewEditButtonClick);
+        if (scValue === '') {
+            setError(sc, 'Credit card number is required');
+            isValid = false;
+        } else if (!scRegex.test(scValue)) {
+            setError(sc, "Please enter a valid credit card number.");
+            isValid = false;
+        } else {
+            setSuccess(sc);
+        }
 
-            // Event listener for save button of new billing option
-            const newSaveBtn = billingOption.querySelector(".save-btn");
-            newSaveBtn.addEventListener("click", handleNewSaveButtonClick);
+        
+    
+        return isValid;
+    }
+    
+    const SB = document.getElementById('save-button')
+    SB.addEventListener('click', e => {
+        if (!validateForm()) {
+            e.preventDefault();
+        }
+        else{
+            // Event listener for save button in new billing option section
+        const newBillingOption = document.querySelector(".new-billing-option");
+        // const saveButton = newBillingOption.querySelector(".save-new");
+        // // Event listener for save button in new billing option section
+        // saveButton.addEventListener("click", function() {
+            // Get selected card type
+            const cardTypeSelect = newBillingOption.querySelector(".card-type select");
+            const cardType = cardTypeSelect ? cardTypeSelect.value : null; // Check if cardTypeSelect is null
 
-            // Event listener for remove button of new billing option
-            const removeBtn = billingOption.querySelector(".remove-btn");
-            removeBtn.addEventListener("click", removeBillingOption);
+            if (cardType) {
+                // Duplicate existing billing option
+                const existingBillingOption = document.querySelector(".billing-option");
+                const billingOption = existingBillingOption.cloneNode(true);
+                
+                // Update card logo and title based on selected card type
+                const cardLogo = billingOption.querySelector(".card-logo img"); // Get the img element
+                const logoPath = getCardLogoPath(cardType);
+                console.log("Logo path:", logoPath); // Log logo path
+                cardLogo.src = logoPath; // Set the src attribute with the logo path
+                cardLogo.alt = cardType; // Set alt attribute for accessibility
+
+                // Update card title without "ending in XXXX"
+                const cardTitle = billingOption.querySelector(".card-title");
+                cardTitle.textContent = cardType.charAt(0).toUpperCase() + cardType.slice(1); 
+
+                // Update added date
+                const addedDate = billingOption.querySelector(".added-date");
+                const currentDate = new Date();
+                addedDate.textContent = (currentDate.getMonth() + 1) + "/" + currentDate.getFullYear().toString().substr(-2);
+
+                // Append new billing option to the DOM
+                const billingInformation = document.querySelector(".billing-information");
+                billingInformation.insertBefore(billingOption, newBillingOption);
+
+                // Event listener for edit button of new billing option
+                const editBtn = billingOption.querySelector(".edit-btn");
+                editBtn.addEventListener("click", handleNewEditButtonClick);
+
+                // Event listener for save button of new billing option
+                const newSaveBtn = billingOption.querySelector(".save-btn");
+                newSaveBtn.addEventListener("click", handleNewSaveButtonClick);
+
+                // Event listener for remove button of new billing option
+                const removeBtn = billingOption.querySelector(".remove-btn");
+                removeBtn.addEventListener("click", removeBillingOption);
+            }
+    // });
         }
     });
+
+
+    
 
 
     // Show/hide additional rows in new billing option section
@@ -224,4 +333,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
         return logoPath;
     }
+
+
+
+    // });
 });
+
+
+

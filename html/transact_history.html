@@ -202,21 +202,25 @@
                     </div>
                 </div>
                 <div class="billing-row hidden">
-                    <input type="text" class="name-on-card" placeholder="Name on Card">
+                    <input id="name-on-card" type="text" class="name-on-card" placeholder="Name on Card">
+                    <div class="error"></div>
                 </div>
                 <div class="billing-row hidden">
-                    <input type="text" class="credit-card-number" placeholder="Credit Card Number">
+                    <input id="credit-card-number" type="text" class="credit-card-number" placeholder="Credit Card Number">
+                    <div class="error"></div>
                 </div>
                 <div class="billing-row hidden">
                     <div class="expires-label">Expires:</div>
-                    <input type="text" class="expiry-month" placeholder="Month">
-                    <input type="text" class="expiry-year" placeholder="Year">
+                    <div class="error"></div>
+                    <input id="expiry-month" type="text" class="expiry-month" placeholder="Month">
+                    <input id="expiry-year" type="text" class="expiry-year" placeholder="Year">
                 </div>
                 <div class="billing-row hidden">
-                    <input type="text" class="security-code" placeholder="Security Code">
+                    <input id="security-code" type="text" class="security-code" placeholder="Security Code">
+                    <div class="error"></div>
                 </div>
                 <div class="billing-row">
-                    <button class="save-new">Save</button>
+                    <button id="save-button" class="save-new">Save</button>
                 </div>
             </div>
                 
