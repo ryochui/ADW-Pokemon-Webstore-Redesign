@@ -43,11 +43,11 @@ a{
     flex-direction: column;
 }
 
-.column.success input{
+.column.success input.in{
     border-color: #09c372;
 }
 
-.column.error input{
+.column.error input.in{
     border-color: #ff3860;
 }
 

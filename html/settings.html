@@ -112,44 +112,47 @@
                 </div>
 
                 <hr>
-                <form id="form" class="row">
+                <form id="form1" class="row" action="">
                     <div class="card change">
                         <div class="row">
                             <h2 class="change-title">Change IGN Handle</h2>
                         </div>
                         <div class="row">
                             <div class="column">
-                                <input type="text" placeholder="Enter your new IGN Handle">
-                                <button class="change-btn">Change IGN Handle</button>
+                                <input class="in" id="ign" type="text" placeholder="Enter your new IGN Handle">
+                                <div class="error"></div>
+                                <button type="submit" class="change-btn">Change IGN Handle</button>
                             </div>
                         </div>
                     </div>
                 </form>
                 <div class="row-change row">
-                    <div class="card change">
+                    <form id="form2" class="card change">
                         <div class="row">
                             <h2 class="change-title">Change Email Address</h2>
                         </div>
                         <div class="row">
                             <div class="column">
-                                <input type="text" placeholder="Enter your new email address">
-                                <input type="text" placeholder="Confirm your new email address">
-                                <button class="change-btn">Change Email Address</button>
+                                <input class="in" id="email1" type="text" placeholder="Enter your new email address">
+                                <div class="error"></div>
+                                <input class="in" id="email2" type="text" placeholder="Confirm your new email address">
+                                <button type="submit" class="change-btn">Change Email Address</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="card change">
+                    </form>
+                    <form id="form3" class="card change" action="">
                         <div class="row">
                             <h2 class="change-title">Change Password</h2>
                         </div>
                         <div class="row">
                             <div class="column">
-                                <input type="password" placeholder="Enter your current password">
-                                <input type="password" placeholder="Enter your new password">
-                                <button class="change-btn">Change Password</button>
+                                <input class="in" id="pass1" type="password" placeholder="Enter your current password">
+                                <div class="error"></div>
+                                <input class="in" id="pass2" type="password" placeholder="Enter your new password">
+                                <button type="submit" class="change-btn">Change Password</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="column2">
@@ -194,6 +197,6 @@
         </section>
     </footer>
 
-    <script src="../js/profile.js"></script>
+    <script src="../js/settings.js"></script>
 </body>
 </html>

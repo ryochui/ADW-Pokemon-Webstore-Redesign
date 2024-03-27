@@ -28,8 +28,8 @@ function validateForm() {
     const usernameValue = username.value.trim();
     const pidValue = pid.value.trim();
     const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
+    const passwordValue = password.value;
+    const password2Value = password2.value;
     
     let isValid = true;
 
