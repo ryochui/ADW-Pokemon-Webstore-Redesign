@@ -183,6 +183,7 @@ a{
 .card-title {
     flex-grow: 1;
     margin-left: 10px;
+    display: none;
 }
 
 .added-date {

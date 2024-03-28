@@ -30,9 +30,9 @@ function validateForm() {
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const cardNumberRegex = /^\d{16}$/;
-    const expiryDateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+    const expiryDateRegex = /^(0[1-9]|1[0-2])\/(2[4-9]|[3-9][0-9])$/;
     const cvcRegex = /^\d{3}$/;
-    const cardholderNameRegex = /^[A-Z][a-z]+(?: [A-Z][a-z]+)*$/;
+    const cardholderNameRegex = /^[A-Z][a-z]+(?: [A-Z][a-z]+)+$/;
     const phoneNumberRegex = /^((\+[0-9]{2})|0)[.\- ]?9[0-9]{2}[.\- ]?[0-9]{3}[.\- ]?[0-9]{4}$/;
 
     if (email === '') {
