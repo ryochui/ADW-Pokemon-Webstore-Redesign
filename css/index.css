@@ -91,7 +91,7 @@ nav {
     height: 100svh;
     gap: 2rem;
     list-style: none;
-    padding: 100px 20px 50px 20px;
+    padding: 120px 20px 50px 20px;
     background: rgb(47,117,122);
     background: linear-gradient(-45deg, rgba(47,117,122,1) 0%, rgba(77,181,129,1) 100%);
     transition: 0.3s;
@@ -116,6 +116,13 @@ nav a:hover {
     text-decoration: underline;
     text-underline-offset: 10px; 
     transition: 0.3s;
+}
+
+nav.active img, nav img {
+    position: absolute;
+    width: 50%;
+    top: 3%;
+    right: 0;
 }
 
 /*Shop*/
