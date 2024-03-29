@@ -32,6 +32,7 @@
     z-index: 101;
     border-radius: 50%;
     border: 2px solid #246873;
+    cursor: pointer;
 }
 
 #hamburger-menu {
@@ -578,6 +579,7 @@ main > section {
     top: 15svh;
     width: 60svw;
     z-index: 1;
+    color: #f0f0f0;
 }
 
 #pokemon-bg-wrapper .pokemon-bg .pokemon-content h1{
@@ -662,6 +664,8 @@ main > section {
     font-weight: 700;
     color: white;
     width: 100%;
+    
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 3px 6px, rgba(0, 0, 0, 0.50) 0px 3px 6px; 
 }
 
 @media screen and (max-width: 572px) {
