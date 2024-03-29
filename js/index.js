@@ -2,6 +2,7 @@ let nav = document.querySelector("nav");
 let sections = document.querySelectorAll("section");
 let hamburger = document.querySelector("#hamburger-menu");
 // news
+let news_sec = document.querySelector("#news");
 let news = document.querySelector("#actual-news").children;
 let newsArr = Array.from(news);
 // pokemon
@@ -24,6 +25,10 @@ sections.forEach(section => {
         }
     });
 });
+
+function newsBg(bg) {
+    news_sec.style.backgroundImage = "url('"+bg+"')";
+}
 
 function moveToSection(location) {
     document.getElementById(location).scrollIntoView({behavior: 'smooth'});
