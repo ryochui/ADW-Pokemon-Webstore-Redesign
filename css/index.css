@@ -745,17 +745,6 @@ main > section {
     left: 10%;
 }
 
-.item-container.pokeball::after {
-    content: "pokeball";
-    display: none;
-    position: absolute;
-    width: fit-content;
-    font-size: 1em;
-    left: 50px;
-    bottom: 25px;
-}
-
-
 .item-container.incense {
     top: 25%;
     left: 0%;
@@ -912,6 +901,98 @@ main > section {
         visibility: visible;
         position: relative;
         bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item-container {
+        width: 80%;
+    }
+
+    .item-container.pokeball {
+        top: 0%;
+        left: 10%;
+    }
+
+    .item-container.incense {
+        top: 20%;
+        left: -5%;
+    }
+    
+    .item-container.incubators {
+        top: 45%;
+        left: 7%;
+    }
+    
+    .item-container.lucky-egg {
+        top: 70%;
+        left: 0%;
+    }
+    
+    .item-container.lure-modules {
+        top: 25%;
+        left: 25%;
+    }
+    
+    .item-container.team-medal {
+        top: 75%;
+        left: 30%;
+    }
+    
+    .item-container.radars {
+        top: 10%;
+        left: 40%;
+    }
+    
+    .item-container.raid-pass {
+        top: 40%;
+        left: 45%;
+    }
+    
+    .item-container.ticket {
+        top: 60%;
+        left: 55%;
+    }
+    
+    .item-container.pokecoin {
+        top: 25%;
+        left: 60%;
+    }
+
+    .item-container.active{
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-30% - 50px), -50%);
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+        z-index: 3;
+    }
+
+    .item-container.inactive {
+        top: -1000vh;
+        transition: all 1s ease-in-out;
+    }
+
+    .item-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-img img:nth-child(1) {
+        width: 100px;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .item-img img:nth-child(2) {
+        position: absolute;
+        width: 125px;
+        transform: translate(-30% , 15%);
+        z-index: 0;
+    }
+
+    .item-hover {
+        display: none;
     }
 }
 
