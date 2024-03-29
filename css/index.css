@@ -404,8 +404,6 @@ main > section {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    justify-content: center;
-    align-content: center;
     align-items: flex-end;
     overflow: hidden;
 }
@@ -417,6 +415,8 @@ main > section {
     width: 80svw;
     height: 80svh;
     overflow: hidden;
+    bottom: 0;
+    /* margin-top: 20%; */
 }
 
 #npcs-slider > div {
